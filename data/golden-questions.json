@@ -1,0 +1,158 @@
+[
+  {
+    "question": "What must a petty food business submit to register with the Registering Authority?",
+    "category": "straightforward",
+    "expected_evidence": ["2.1.1 Registration of Petty Food Business", "2.1.1(1)"],
+    "expected_answer_type": "direct"
+  },
+  {
+    "question": "What is the annual turnover threshold mentioned in the definition of a petty food manufacturer?",
+    "category": "straightforward",
+    "expected_evidence": ["1.2: Definitions", "4. Petty Food Manufacturer"],
+    "expected_answer_type": "direct"
+  },
+  {
+    "question": "What information must appear in the list of ingredients for a pre-packaged food?",
+    "category": "straightforward",
+    "expected_evidence": ["5. Labelling Requirements", "5(2) List of Ingredients"],
+    "expected_answer_type": "direct"
+  },
+  {
+    "question": "In what order should ingredients be listed on a food label?",
+    "category": "straightforward",
+    "expected_evidence": ["5. Labelling Requirements", "5(2)(b)"],
+    "expected_answer_type": "direct"
+  },
+  {
+    "question": "What date information must be declared on a packaged food label?",
+    "category": "straightforward",
+    "expected_evidence": ["5. Labelling Requirements", "5(10)(a)"],
+    "expected_answer_type": "direct"
+  },
+  {
+    "question": "What is the minimum size for declarations specified in Schedule-II?",
+    "category": "straightforward",
+    "expected_evidence": ["7. Mandatory Declarations", "7(1)"],
+    "expected_answer_type": "direct"
+  },
+  {
+    "question": "What is the registration fee listed in Schedule 3?",
+    "category": "straightforward",
+    "expected_evidence": ["SCHEDULE - 3", "1. Fees for Registration Rs 100"],
+    "expected_answer_type": "direct"
+  },
+  {
+    "question": "What is the minimum height of letters in a Legal Metrology declaration when the letters are blown, formed, molded, embossed or perforated?",
+    "category": "straightforward",
+    "expected_evidence": ["7. Principal display panel-its area, size and letter etc.", "7(3)"],
+    "expected_answer_type": "direct"
+  },
+  {
+    "question": "I make homemade pickles in a small kitchen and sell them through Instagram. Do I need FSSAI registration or a license?",
+    "category": "situation_specific",
+    "expected_evidence": ["2.1 Registration and Licensing of Food Business", "2.1.1 Registration of Petty Food Business", "4. Petty Food Manufacturer"],
+    "expected_answer_type": "direct"
+  },
+  {
+    "question": "I run a home bakery with annual turnover below Rs 12 lakhs and sell cakes directly to local customers. Which FSSAI process applies to me?",
+    "category": "situation_specific",
+    "expected_evidence": ["1.2: Definitions", "4. Petty Food Manufacturer", "2.1.1 Registration of Petty Food Business"],
+    "expected_answer_type": "direct"
+  },
+  {
+    "question": "I sell packaged spice mixes online. How should I order the ingredients on the label?",
+    "category": "situation_specific",
+    "expected_evidence": ["5. Labelling Requirements", "5(2) List of Ingredients", "5(2)(b)"],
+    "expected_answer_type": "direct"
+  },
+  {
+    "question": "I sell a packaged snack with a shelf life of five days. Do I need to print both the manufacture date and expiry date?",
+    "category": "situation_specific",
+    "expected_evidence": ["5. Labelling Requirements", "5(10)(a)", "8. Exemptions from certain labelling requirements-", "8(3)"],
+    "expected_answer_type": "direct"
+  },
+  {
+    "question": "I sell a single-ingredient product in a package smaller than 100 square centimetres. Which label details may be exempted?",
+    "category": "situation_specific",
+    "expected_evidence": ["8. Exemptions from certain labelling requirements-", "8(1)"],
+    "expected_answer_type": "direct"
+  },
+  {
+    "question": "I sell packaged food through a retail shop, and I am both the brand owner and the packer. What name and address wording should appear on my label?",
+    "category": "situation_specific",
+    "expected_evidence": ["5. Labelling Requirements", "5(6) Declaration of name and complete address", "5(6)(a)"],
+    "expected_answer_type": "direct"
+  },
+  {
+    "question": "I sell packaged food in India and want to print only the FSSAI label information. Do I also need the Legal Metrology declarations such as net quantity and MRP?",
+    "category": "ambiguous",
+    "expected_evidence": ["5. Labelling Requirements", "5(7) Declaration and manner of declaration of Net quantity, Retail Sale Price and Consumer Care details", "6. Declarations to be made on every package.", "7. Principal display panel-its area, size and letter etc."],
+    "expected_answer_type": "direct"
+  },
+  {
+    "question": "For a packaged food product, which authority's rules determine the required name, address, net quantity and retail sale price declarations?",
+    "category": "ambiguous",
+    "expected_evidence": ["5. Labelling Requirements", "5(6) Declaration of name and complete address", "6. Declarations to be made on every package.", "10. Declaration of name and address of the manufacturer, etc."],
+    "expected_answer_type": "direct"
+  },
+  {
+    "question": "My food label has an FSSAI date declaration and a Legal Metrology date declaration that appear different. Which date rules should I compare before finalizing the label?",
+    "category": "ambiguous",
+    "expected_evidence": ["5. Labelling Requirements", "5(10) Date marking", "6. Declarations to be made on every package.", "6(1)(g)"],
+    "expected_answer_type": "direct"
+  },
+  {
+    "question": "I sell a packaged product in a very small container. How do the FSSAI small-package exemptions interact with Legal Metrology display-panel and declaration rules?",
+    "category": "ambiguous",
+    "expected_evidence": ["8. Exemptions from certain labelling requirements-", "8(1)", "7. Principal display panel-its area, size and letter etc.", "7(1)"],
+    "expected_answer_type": "direct"
+  },
+  {
+    "question": "If my product is sold in multiple inner packages inside one outer package, where should the required declarations appear?",
+    "category": "ambiguous",
+    "expected_evidence": ["5. Labelling Requirements", "5(7) Declaration and manner of declaration of Net quantity, Retail Sale Price and Consumer Care details", "9. Manner in which declaration shall be made.", "9(3)"],
+    "expected_answer_type": "direct"
+  },
+  {
+    "question": "Do these documents tell me whether recycled plastic is permitted for my food packaging?",
+    "category": "out_of_scope",
+    "expected_evidence": null,
+    "expected_answer_type": "hand_off"
+  },
+  {
+    "question": "Do these documents explain how to register for GST when I start selling homemade food?",
+    "category": "out_of_scope",
+    "expected_evidence": null,
+    "expected_answer_type": "hand_off"
+  },
+  {
+    "question": "What cosmetic-product packaging requirements apply to my face cream business?",
+    "category": "out_of_scope",
+    "expected_evidence": null,
+    "expected_answer_type": "hand_off"
+  },
+  {
+    "question": "What export certificates and overseas labeling rules do I need to sell my snacks outside India?",
+    "category": "out_of_scope",
+    "expected_evidence": null,
+    "expected_answer_type": "hand_off"
+  },
+  {
+    "question": "What exact FSSAI label requirements apply to a food product sold only through a WhatsApp group with no physical package?",
+    "category": "unanswerable",
+    "expected_evidence": null,
+    "expected_answer_type": "abstain"
+  },
+  {
+    "question": "What specific FSSAI registration category applies to a cloud kitchen with three locations and annual turnover of Rs 18 lakhs?",
+    "category": "unanswerable",
+    "expected_evidence": null,
+    "expected_answer_type": "abstain"
+  },
+  {
+    "question": "What exact font family must I use for every English word on my food label?",
+    "category": "unanswerable",
+    "expected_evidence": null,
+    "expected_answer_type": "abstain"
+  }
+]

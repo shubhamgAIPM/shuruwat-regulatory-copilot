@@ -1,0 +1,1 @@
+"""Shuruwat application services."""
