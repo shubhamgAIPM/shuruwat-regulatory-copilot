@@ -13,15 +13,16 @@ The repository currently includes:
 - Three source PDFs in `data/raw/`
 - Reproducible page-level extraction with `pypdf`
 - English-only indexing policy for v1
-- 108 naive chunks with stable IDs and page traceability
-- 108 local 384-dimensional embeddings
+- 108 naive chunks and 160 structure-aware chunks with stable IDs and page traceability
+- Local 384-dimensional embeddings for both chunking strategies
 - Supabase/Postgres with pgvector schema and seeded corpus
 - FastAPI API with local embeddings, Supabase retrieval, and Groq generation
 - React/Vite chat UI with citations, source panel, loading states, and cool blue-teal styling
 - A 26-question golden set in `data/golden-questions.json`
+- Offline retrieval and generation evaluation runners with committed naive and structure-aware baselines
 - Deterministic API tests
 
-The current retrieval strategy is `naive`. Structure-aware chunking is the next RAG experiment and must use the same embedding model, retrieval settings, generation model, and golden set.
+Both `naive` and `structure_aware` retrieval strategies are implemented. Comparisons keep the embedding model, top-k, generation model, and golden set fixed so only chunking changes.
 
 ## Product Scope
 
@@ -66,13 +67,13 @@ Credentials stay server-side. The browser calls the FastAPI endpoint and never c
 Source PDFs
     -> pypdf page extraction
     -> language and structure inspection
-    -> naive chunking
+    -> naive or structure-aware chunking
     -> local sentence-transformers embeddings
     -> Supabase Postgres + pgvector
 
 User question
     -> local question embedding
-    -> Supabase vector retrieval
+    -> Supabase vector retrieval (strategy-scoped)
     -> evidence-only Groq generation
     -> server-side citation resolution
     -> React chat UI
@@ -105,7 +106,7 @@ disclaimer
 conversation_id
 ```
 
-`structure_aware` is accepted as a future retrieval strategy, so switching strategies should not require UI changes.
+`structure_aware` is implemented alongside `naive`, so switching strategies does not require UI changes.
 
 ## Repository Layout
 
@@ -127,14 +128,24 @@ conversation_id
 │   └── seed_embeddings.py    Seed documents and embedded chunks
 ├── docs/
 │   └── DATA_STRATEGY.md      Corpus audit and language policy
+├── evals/
+│   ├── evidence_match.py     Fuzzy retrieval evidence matching
+│   ├── generation_scoring.py Answer-type and citation scoring
+│   ├── run_retrieval_eval.py Offline Recall@k / Precision@k
+│   ├── run_generation_eval.py Generation eval + review template
+│   └── results/              Committed baseline reports
 ├── ingestion/
 │   ├── inspect_pdfs.py       Page-level PDF extraction
 │   ├── create_naive_chunks.py
+│   ├── create_structure_aware_chunks.py
 │   └── embed_chunks.py       Local embedding generation
 ├── retrieval/
 │   └── local_vector_search.py
 └── tests/
-    └── test_api.py
+    ├── test_api.py
+    ├── test_evidence_match.py
+    ├── test_generation_scoring.py
+    └── test_structure_aware_chunks.py
 ```
 
 ## Prerequisites
@@ -182,7 +193,13 @@ The current processed artifacts are committed for immediate handoff. To regenera
 ```bash
 .venv/bin/python ingestion/inspect_pdfs.py
 .venv/bin/python ingestion/create_naive_chunks.py
-.venv/bin/python ingestion/embed_chunks.py
+.venv/bin/python ingestion/embed_chunks.py \
+  --input data/processed/naive_chunks.jsonl \
+  --output data/processed/naive_chunks_embeddings.jsonl
+.venv/bin/python ingestion/create_structure_aware_chunks.py
+.venv/bin/python ingestion/embed_chunks.py \
+  --input data/processed/structure_aware_chunks.jsonl \
+  --output data/processed/structure_aware_chunks_embeddings.jsonl
 ```
 
 The extraction pipeline preserves page-level text and records language signals. v1 indexes validated English pages only; pages containing unvalidated Devanagari content are marked `review_required` and are not automatically chunked.
@@ -191,8 +208,8 @@ Expected current artifacts:
 
 - 3 documents
 - 145 extracted pages
-- 108 naive chunks
-- 108 embeddings
+- 108 naive chunks / 108 embeddings
+- 160 structure-aware chunks / 160 embeddings
 - 384 dimensions per embedding
 
 ## Supabase Setup
@@ -203,10 +220,12 @@ Apply the schema:
 .venv/bin/python database/apply_migration.py
 ```
 
-Seed the current documents and naive embeddings:
+Seed embeddings (naive by default; pass structure-aware input for the alternate corpus):
 
 ```bash
 .venv/bin/python database/seed_embeddings.py
+.venv/bin/python database/seed_embeddings.py \
+  --input data/processed/structure_aware_chunks_embeddings.jsonl
 ```
 
 The migration creates `documents`, `chunks`, `eval_questions`, and `retrieval_runs`, enables pgvector, and defines the `match_chunks()` function. The seed is idempotent.
@@ -249,10 +268,10 @@ The UI includes a responsive conversation rail, question composer, live source t
 
 ## Tests and Validation
 
-Run API tests:
+Run API and eval unit tests:
 
 ```bash
-.venv/bin/python -m pytest tests/test_api.py -q
+.venv/bin/python -m pytest tests/ -q
 ```
 
 Run the frontend build:
@@ -274,7 +293,57 @@ The API tests mock retrieval and generation so they do not consume Groq quota or
 - 4 out-of-scope
 - 3 unanswerable
 
-The next evaluation implementation should calculate Recall@3, Recall@5, and Precision@5 for the naive baseline, then run the identical set against structure-aware chunks. Manual answer review should record faithfulness, citation correctness, completeness, and appropriate abstention.
+Out-of-scope and unanswerable questions have `expected_evidence: null` and are scored on answer type / abstention behavior rather than retrieval metrics.
+
+## Evaluation Results
+
+Retrieval eval keeps the embedding model (`all-MiniLM-L6-v2`), top-k (`5`), and golden set fixed. Only chunking strategy changes. Evidence hits use fuzzy matching against chunk content and section metadata because some golden evidence strings are finer-grained than chunk boundaries.
+
+| Strategy | Chunks | Recall@3 | Recall@5 | Precision@5 |
+| --- | ---: | ---: | ---: | ---: |
+| naive | 108 | 0.465 | 0.592 | 0.474 |
+| structure_aware | 160 | **0.535** | **0.605** | 0.389 |
+
+Recall@5 by category:
+
+| Category | naive | structure_aware |
+| --- | ---: | ---: |
+| straightforward | 0.688 | **0.750** |
+| situation_specific | 0.542 | 0.542 |
+| ambiguous | 0.500 | 0.450 |
+
+Structure-aware chunking improves overall recall, especially on straightforward questions, while precision drops because section-sized chunks can pull in broader neighboring text. Ambiguous cross-authority questions remain hard for both strategies. That tradeoff is the main controlled RAG finding in this repo.
+
+Committed reports:
+
+- [`evals/results/naive_baseline.md`](evals/results/naive_baseline.md)
+- [`evals/results/structure_aware_baseline.md`](evals/results/structure_aware_baseline.md)
+
+Re-run retrieval eval:
+
+```bash
+.venv/bin/python evals/run_retrieval_eval.py \
+  --chunks data/processed/naive_chunks_embeddings.jsonl \
+  --strategy naive \
+  --output evals/results/naive_baseline.json
+
+.venv/bin/python evals/run_retrieval_eval.py \
+  --chunks data/processed/structure_aware_chunks_embeddings.jsonl \
+  --strategy structure_aware \
+  --output evals/results/structure_aware_baseline.json
+```
+
+Generation eval scores answer-type accuracy and citation validity, and writes a manual review template for faithfulness, completeness, and abstention quality:
+
+```bash
+# Offline template + retrieval context (no Groq calls)
+.venv/bin/python evals/run_generation_eval.py --dry-run
+
+# Live Groq scoring
+.venv/bin/python evals/run_generation_eval.py
+```
+
+Dry-run artifacts are in [`evals/results/naive_generation.md`](evals/results/naive_generation.md) and [`evals/results/manual_review_template.md`](evals/results/manual_review_template.md).
 
 ## Data and Provenance
 
@@ -301,6 +370,6 @@ cp .env.example .env
 cd app/web && npm install
 ```
 
-Then configure `.env`, run the Supabase migration and seeder if using a new project, start the API, and start the web client. Begin future work by reading this README, `docs/DATA_STRATEGY.md`, `database/migrations/001_initial.sql`, and `data/golden-questions.json`.
+Then configure `.env`, run the Supabase migration and seeder if using a new project, start the API, and start the web client. Begin future work by reading this README, `docs/DATA_STRATEGY.md`, `database/migrations/001_initial.sql`, `data/golden-questions.json`, and `evals/results/`.
 
-The next product work is to improve evaluation and implement structure-aware chunking without changing the answer-generation or UI contracts.
+Useful next steps: live generation eval with Groq, seeding both chunking strategies into Supabase for side-by-side UI comparison, and hybrid retrieval experiments that stay outside the current v1 scope.

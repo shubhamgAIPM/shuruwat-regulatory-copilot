@@ -55,14 +55,26 @@ def main() -> None:
     parser.add_argument(
         "--input", type=Path, default=Path("data/processed/naive_chunks_embeddings.jsonl")
     )
+    parser.add_argument(
+        "--strategy",
+        choices=("naive", "structure_aware"),
+        default=None,
+        help="Expected chunking_strategy; defaults to the strategy found in the input file",
+    )
     args = parser.parse_args()
     load_dotenv()
 
     chunks = [json.loads(line) for line in args.input.read_text(encoding="utf-8").splitlines() if line.strip()]
     if not chunks:
         raise SystemExit(f"No embedded chunks found in {args.input}")
-    if any(chunk["chunking_strategy"] != "naive" or chunk["language"] != "en" for chunk in chunks):
-        raise SystemExit("Input contains chunks outside the English-only naive seed")
+    strategies = {chunk["chunking_strategy"] for chunk in chunks}
+    if len(strategies) != 1:
+        raise SystemExit(f"Input must contain a single chunking_strategy, found: {sorted(strategies)}")
+    strategy = args.strategy or next(iter(strategies))
+    if strategy not in {"naive", "structure_aware"}:
+        raise SystemExit(f"Unsupported chunking_strategy: {strategy}")
+    if any(chunk["chunking_strategy"] != strategy or chunk["language"] != "en" for chunk in chunks):
+        raise SystemExit(f"Input contains chunks outside the English-only {strategy} seed")
 
     documents = {chunk["source_filename"] for chunk in chunks}
     unknown = documents - DOCUMENTS.keys()
@@ -107,6 +119,9 @@ def main() -> None:
                     ) values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
                     on conflict (chunk_id) do update set
                         content = excluded.content,
+                        section = excluded.section,
+                        subsection = excluded.subsection,
+                        parent_heading = excluded.parent_heading,
                         page_start = excluded.page_start,
                         page_end = excluded.page_end,
                         embedding_model = excluded.embedding_model,
@@ -118,7 +133,7 @@ def main() -> None:
                         chunk["content"],
                         chunk.get("section"),
                         chunk.get("subsection"),
-                        None,
+                        chunk.get("parent_heading"),
                         chunk["page_start"],
                         chunk["page_end"],
                         chunk["chunking_strategy"],
@@ -127,7 +142,7 @@ def main() -> None:
                         vector_literal(chunk["embedding"]),
                     ),
                 )
-    print(f"Seeded {len(documents)} documents and {len(chunks)} chunks")
+    print(f"Seeded {len(documents)} documents and {len(chunks)} {strategy} chunks")
 
 
 if __name__ == "__main__":

@@ -29,4 +29,4 @@
 ## Notes
 
 - Out-of-scope and unanswerable questions are excluded from retrieval metrics.
-- Structure-aware chunking should re-run this script with the same golden set.
+- Compare with `structure_aware_baseline.md` using the same golden set and embedding model.

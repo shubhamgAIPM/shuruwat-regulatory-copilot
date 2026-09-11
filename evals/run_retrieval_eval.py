@@ -121,16 +121,17 @@ def summarize(per_question: list[dict[str, Any]]) -> dict[str, Any]:
 
 def render_markdown(report: dict[str, Any]) -> str:
     overall = report["summary"]["overall"]
+    strategy = report["chunking_strategy"]
     lines = [
-        "# Naive Retrieval Baseline",
+        f"# {strategy.replace('_', ' ').title()} Retrieval Baseline",
         "",
         f"- Generated: `{report['generated_at']}`",
-        f"- Chunking strategy: `{report['chunking_strategy']}`",
+        f"- Chunking strategy: `{strategy}`",
         f"- Embedding model: `{report['embedding_model']}`",
         f"- Chunks file: `{report['chunks_path']}`",
         f"- Golden set: `{report['golden_path']}` ({report['question_count']} questions)",
         f"- Top-k: `{report['top_k']}`",
-        f"- Matching: fuzzy content match (naive chunks have `section=null`)",
+        f"- Matching: `{report.get('matching_method', 'fuzzy_content')}`",
         "",
         "## Overall (questions with expected evidence)",
         "",
@@ -158,7 +159,8 @@ def render_markdown(report: dict[str, Any]) -> str:
             "## Notes",
             "",
             "- Out-of-scope and unanswerable questions are excluded from retrieval metrics.",
-            "- Structure-aware chunking should re-run this script with the same golden set.",
+            "- Compare naive and structure_aware results with the same golden set and embedding model.",
+            "- Fuzzy content matching is used because some expected evidence strings are finer-grained than chunk boundaries.",
             "",
         ]
     )

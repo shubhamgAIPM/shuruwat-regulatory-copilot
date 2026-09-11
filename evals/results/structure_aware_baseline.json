@@ -1,0 +1,1683 @@
+{
+  "generated_at": "2026-09-11T20:20:27.815523+00:00",
+  "chunking_strategy": "structure_aware",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "chunks_path": "data/processed/structure_aware_chunks_embeddings.jsonl",
+  "golden_path": "data/golden-questions.json",
+  "question_count": 26,
+  "top_k": 5,
+  "matching_method": "fuzzy_content",
+  "summary": {
+    "scored_questions": 19,
+    "skipped_questions": 7,
+    "overall": {
+      "count": 19,
+      "recall_at_3": 0.5350877192982457,
+      "recall_at_5": 0.605263157894737,
+      "precision_at_5": 0.38947368421052636
+    },
+    "by_category": {
+      "ambiguous": {
+        "count": 5,
+        "recall_at_3": 0.25,
+        "recall_at_5": 0.45,
+        "precision_at_5": 0.4
+      },
+      "situation_specific": {
+        "count": 6,
+        "recall_at_3": 0.4861111111111111,
+        "recall_at_5": 0.5416666666666666,
+        "precision_at_5": 0.4000000000000001
+      },
+      "straightforward": {
+        "count": 8,
+        "recall_at_3": 0.75,
+        "recall_at_5": 0.75,
+        "precision_at_5": 0.375
+      }
+    },
+    "skipped_categories": [
+      "out_of_scope",
+      "unanswerable"
+    ]
+  },
+  "questions": [
+    {
+      "question": "What must a petty food business submit to register with the Registering Authority?",
+      "category": "straightforward",
+      "expected_answer_type": "direct",
+      "expected_evidence": [
+        "2.1.1 Registration of Petty Food Business",
+        "2.1.1(1)"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "19ca2403c1509ba5865a9e6e",
+          "page": 2,
+          "section": "Schedule 4 within a period of 30 days",
+          "retrieval_score": 0.7650794982910156,
+          "matched_evidence": [],
+          "excerpt": "Schedule 4 within a period of 30 days. If registration is not granted, or denied, or inspection not ordered within 7 days as provided in above sub regulation (3) or no decision is communicated within 30 days as provided in above sub regulat"
+        },
+        {
+          "chunk_id": "b72a62897726389db631d910",
+          "page": 2,
+          "section": "5. Registering Authority\u201d means Designated Officer/ Food Safety Officer or any official in Panchayat, Municipal",
+          "retrieval_score": 0.7519608736038208,
+          "matched_evidence": [
+            "2.1.1 Registration of Petty Food Business",
+            "2.1.1(1)"
+          ],
+          "excerpt": "5. Registering Authority\u201d means Designated Officer/ Food Safety Officer or any official in Panchayat, Municipal Corporation or any other local body or Panchayat in an area, notified as such by the State Food Safety Commissioner for the purp"
+        },
+        {
+          "chunk_id": "b699ee8a93351a1d6765940c",
+          "page": 3,
+          "section": "2.1.2 License for food business",
+          "retrieval_score": 0.7289239168167114,
+          "matched_evidence": [
+            "2.1.1 Registration of Petty Food Business",
+            "2.1.1(1)"
+          ],
+          "excerpt": "2.1.2 License for food business (1) Subject to Regulation 2.1.1, no person shall commence any food business unless he possesses a valid license. Provided that any person or Food Business Operator carrying on food business on the date of not"
+        },
+        {
+          "chunk_id": "9392f105d99594a7991bbe44",
+          "page": 5,
+          "section": "2.1.9 Modifications, Expansion or Changes in premise(s) after grant of license or registration",
+          "retrieval_score": 0.6657835245132446,
+          "matched_evidence": [
+            "2.1.1(1)"
+          ],
+          "excerpt": "2.1.9 Modifications, Expansion or Changes in premise(s) after grant of license or registration (1) Food Business Operators shall ensure that the Registering or Licensing Authority always has up-to-date information on their food business est"
+        },
+        {
+          "chunk_id": "852520b6035f32ecd933de17",
+          "page": 5,
+          "section": "2.1.8 Suspension or cancellation of Registration Certificate or license",
+          "retrieval_score": 0.6569809317588806,
+          "matched_evidence": [
+            "2.1.1(1)"
+          ],
+          "excerpt": "2.1.8 Suspension or cancellation of Registration Certificate or license (1) The Registering or Licensing Authority in accordance with the provisions of section 32 of the Act may, after giving the concerned Food Business Operator a reasonabl"
+        }
+      ],
+      "included_in_retrieval_metrics": true,
+      "metrics": {
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.8,
+        "evidence_hits": {
+          "2.1.1 Registration of Petty Food Business": true,
+          "2.1.1(1)": true
+        }
+      }
+    },
+    {
+      "question": "What is the annual turnover threshold mentioned in the definition of a petty food manufacturer?",
+      "category": "straightforward",
+      "expected_answer_type": "direct",
+      "expected_evidence": [
+        "1.2: Definitions",
+        "4. Petty Food Manufacturer"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "c3c90c017a8d4689a228da4e",
+          "page": 2,
+          "section": "Schedule 3",
+          "retrieval_score": 0.524427592754364,
+          "matched_evidence": [],
+          "excerpt": "Schedule 3. (2) The petty food manufacturer shall follow the basic hygiene and safety requirements provided in Part I of"
+        },
+        {
+          "chunk_id": "8dfc5efdee4a8bfb19a494cb",
+          "page": 7,
+          "section": "SCHEDULE 1",
+          "retrieval_score": 0.49352192878723145,
+          "matched_evidence": [],
+          "excerpt": "SCHEDULE 1 [See Regulation 2.1.2 (3)] List of food business falling under the purview of Central Licensing Authority I. Dairy units including milk chilling units equipped to handle or process more than 50,000 litres of liquid milk/day or 25"
+        },
+        {
+          "chunk_id": "b699ee8a93351a1d6765940c",
+          "page": 3,
+          "section": "2.1.2 License for food business",
+          "retrieval_score": 0.456350713968277,
+          "matched_evidence": [],
+          "excerpt": "2.1.2 License for food business (1) Subject to Regulation 2.1.1, no person shall commence any food business unless he possesses a valid license. Provided that any person or Food Business Operator carrying on food business on the date of not"
+        },
+        {
+          "chunk_id": "4923be0031c1a3238e40a561",
+          "page": 16,
+          "section": "5. Category of License",
+          "retrieval_score": 0.4560662806034088,
+          "matched_evidence": [],
+          "excerpt": "5. Category of License: This license is granted under and is subject to the provisions of FSS Act, 2006 all of which must be complied with by the licensee. Place: Date: Stamp and signature of Designated Officer Food Safety and Standards Aut"
+        },
+        {
+          "chunk_id": "852520b6035f32ecd933de17",
+          "page": 5,
+          "section": "2.1.8 Suspension or cancellation of Registration Certificate or license",
+          "retrieval_score": 0.4467613399028778,
+          "matched_evidence": [],
+          "excerpt": "2.1.8 Suspension or cancellation of Registration Certificate or license (1) The Registering or Licensing Authority in accordance with the provisions of section 32 of the Act may, after giving the concerned Food Business Operator a reasonabl"
+        }
+      ],
+      "included_in_retrieval_metrics": true,
+      "metrics": {
+        "recall_at_3": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "evidence_hits": {
+          "1.2: Definitions": false,
+          "4. Petty Food Manufacturer": false
+        }
+      }
+    },
+    {
+      "question": "What information must appear in the list of ingredients for a pre-packaged food?",
+      "category": "straightforward",
+      "expected_answer_type": "direct",
+      "expected_evidence": [
+        "5. Labelling Requirements",
+        "5(2) List of Ingredients"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "92a8cf7942c55a4308126c5a",
+          "page": 30,
+          "section": "5. Labelling Requirements",
+          "retrieval_score": 0.660940945148468,
+          "matched_evidence": [
+            "5. Labelling Requirements",
+            "5(2) List of Ingredients"
+          ],
+          "excerpt": "5. Labelling Requirements. -In addition to general requirements specified in Regulation 4, every package shall carry the following information on the label, namely,- (1) The Name of Food: Every package of food shall carry name of the food w"
+        },
+        {
+          "chunk_id": "621a3c03bb7d3147c7b17251",
+          "page": 38,
+          "section": "7. Mandatory Declarations",
+          "retrieval_score": 0.6005362272262573,
+          "matched_evidence": [
+            "5(2) List of Ingredients"
+          ],
+          "excerpt": "7. Mandatory Declarations. - (1) Wherever, packaged food contains ingredients and /or additives as stated in schedule -II of these regulations, the same shall be prominently displayed on the label. The size of numerals and letters for the d"
+        },
+        {
+          "chunk_id": "df395f3b842ace1977619783",
+          "page": 28,
+          "section": "5.2.3 Segregation shall be provided for the storage of raw, processed, rejected, recalled or returned materials",
+          "retrieval_score": 0.5475372076034546,
+          "matched_evidence": [],
+          "excerpt": "5.2.3 Segregation shall be provided for the storage of raw, processed, rejected, recalled or returned materials or products which will be distinguishably marked and secured. Raw materials and food shall be stored in separate areas from prin"
+        },
+        {
+          "chunk_id": "fe36cef4c6c74e14de7f5124",
+          "page": 40,
+          "section": "CHAPTER 5",
+          "retrieval_score": 0.5276473760604858,
+          "matched_evidence": [
+            "5(2) List of Ingredients"
+          ],
+          "excerpt": "CHAPTER 5 LABELLING OF FOOD ADDITIVES WHEN SOLD AS SUCH 11. Labelling of packaged Food Additives for Retail Sale (1) Every package of a food additive meant for retail sale to the consumer shall be labelled in accordance with the Food Safety"
+        },
+        {
+          "chunk_id": "fd76c6e7147a35f3b33542dd",
+          "page": 28,
+          "section": "5.3 Food Processing / Preparation, Packaging and Distribution / Service",
+          "retrieval_score": 0.5159012675285339,
+          "matched_evidence": [],
+          "excerpt": "5.3 Food Processing / Preparation, Packaging and Distribution / Service 5.3.1.Time and temperature control 5.3.1.1 The Food Business shall develop and maintain the systems to ensure that time and temperature are controlled effectively where"
+        }
+      ],
+      "included_in_retrieval_metrics": true,
+      "metrics": {
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.6,
+        "evidence_hits": {
+          "5. Labelling Requirements": true,
+          "5(2) List of Ingredients": true
+        }
+      }
+    },
+    {
+      "question": "In what order should ingredients be listed on a food label?",
+      "category": "straightforward",
+      "expected_answer_type": "direct",
+      "expected_evidence": [
+        "5. Labelling Requirements",
+        "5(2)(b)"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "92a8cf7942c55a4308126c5a",
+          "page": 30,
+          "section": "5. Labelling Requirements",
+          "retrieval_score": 0.6696628332138062,
+          "matched_evidence": [
+            "5. Labelling Requirements"
+          ],
+          "excerpt": "5. Labelling Requirements. -In addition to general requirements specified in Regulation 4, every package shall carry the following information on the label, namely,- (1) The Name of Food: Every package of food shall carry name of the food w"
+        },
+        {
+          "chunk_id": "fe36cef4c6c74e14de7f5124",
+          "page": 40,
+          "section": "CHAPTER 5",
+          "retrieval_score": 0.5721437931060791,
+          "matched_evidence": [],
+          "excerpt": "CHAPTER 5 LABELLING OF FOOD ADDITIVES WHEN SOLD AS SUCH 11. Labelling of packaged Food Additives for Retail Sale (1) Every package of a food additive meant for retail sale to the consumer shall be labelled in accordance with the Food Safety"
+        },
+        {
+          "chunk_id": "621a3c03bb7d3147c7b17251",
+          "page": 38,
+          "section": "7. Mandatory Declarations",
+          "retrieval_score": 0.5686498880386353,
+          "matched_evidence": [],
+          "excerpt": "7. Mandatory Declarations. - (1) Wherever, packaged food contains ingredients and /or additives as stated in schedule -II of these regulations, the same shall be prominently displayed on the label. The size of numerals and letters for the d"
+        },
+        {
+          "chunk_id": "fa2d57aed0d178d1ddecf7e9",
+          "page": 40,
+          "section": "12. Labelling of Pre",
+          "retrieval_score": 0.5636780858039856,
+          "matched_evidence": [],
+          "excerpt": "12. Labelling of Pre-packaged Food Additives Sold other than by Retail Every package of a food additive meant for sale other than in Retail shall carry label in accordance to chapter 4 and regulation 10 of these regulations except the claus"
+        },
+        {
+          "chunk_id": "c123482f37fbebf3c2e5e40e",
+          "page": 28,
+          "section": null,
+          "retrieval_score": 0.5000743269920349,
+          "matched_evidence": [],
+          "excerpt": "(3) They shall come into force on the date of their publication in the Official Gazette and Food Business Operator shall comply with all the provisions of these regulations after one year from the date of their pub lication in the Official "
+        }
+      ],
+      "included_in_retrieval_metrics": true,
+      "metrics": {
+        "recall_at_3": 0.5,
+        "recall_at_5": 0.5,
+        "precision_at_5": 0.2,
+        "evidence_hits": {
+          "5. Labelling Requirements": true,
+          "5(2)(b)": false
+        }
+      }
+    },
+    {
+      "question": "What date information must be declared on a packaged food label?",
+      "category": "straightforward",
+      "expected_answer_type": "direct",
+      "expected_evidence": [
+        "5. Labelling Requirements",
+        "5(10)(a)"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "c123482f37fbebf3c2e5e40e",
+          "page": 28,
+          "section": null,
+          "retrieval_score": 0.7591692209243774,
+          "matched_evidence": [],
+          "excerpt": "(3) They shall come into force on the date of their publication in the Official Gazette and Food Business Operator shall comply with all the provisions of these regulations after one year from the date of their pub lication in the Official "
+        },
+        {
+          "chunk_id": "6c1fc37d62ce57ce73d575b0",
+          "page": 34,
+          "section": "1. Upto 100 3 2",
+          "retrieval_score": 0.6625531911849976,
+          "matched_evidence": [],
+          "excerpt": "1. Upto 100 3 2.5 6 2. Above 100 to 500 4 3.5 8 3. Above 500 to 2500 6 5 12 4. Above 2500 8 7 16 (d) Declaration regarding Veg. or Non-Veg shall also be prominently displayed as provided in this regulation on the pamphlets, leaflets and adv"
+        },
+        {
+          "chunk_id": "92a8cf7942c55a4308126c5a",
+          "page": 30,
+          "section": "5. Labelling Requirements",
+          "retrieval_score": 0.6296330094337463,
+          "matched_evidence": [
+            "5. Labelling Requirements"
+          ],
+          "excerpt": "5. Labelling Requirements. -In addition to general requirements specified in Regulation 4, every package shall carry the following information on the label, namely,- (1) The Name of Food: Every package of food shall carry name of the food w"
+        },
+        {
+          "chunk_id": "fa2d57aed0d178d1ddecf7e9",
+          "page": 40,
+          "section": "12. Labelling of Pre",
+          "retrieval_score": 0.6248263120651245,
+          "matched_evidence": [],
+          "excerpt": "12. Labelling of Pre-packaged Food Additives Sold other than by Retail Every package of a food additive meant for sale other than in Retail shall carry label in accordance to chapter 4 and regulation 10 of these regulations except the claus"
+        },
+        {
+          "chunk_id": "621a3c03bb7d3147c7b17251",
+          "page": 38,
+          "section": "7. Mandatory Declarations",
+          "retrieval_score": 0.6073946952819824,
+          "matched_evidence": [],
+          "excerpt": "7. Mandatory Declarations. - (1) Wherever, packaged food contains ingredients and /or additives as stated in schedule -II of these regulations, the same shall be prominently displayed on the label. The size of numerals and letters for the d"
+        }
+      ],
+      "included_in_retrieval_metrics": true,
+      "metrics": {
+        "recall_at_3": 0.5,
+        "recall_at_5": 0.5,
+        "precision_at_5": 0.2,
+        "evidence_hits": {
+          "5. Labelling Requirements": true,
+          "5(10)(a)": false
+        }
+      }
+    },
+    {
+      "question": "What is the minimum size for declarations specified in Schedule-II?",
+      "category": "straightforward",
+      "expected_answer_type": "direct",
+      "expected_evidence": [
+        "7. Mandatory Declarations",
+        "7(1)"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "77b0824abc0e6c8c057871aa",
+          "page": 29,
+          "section": "Schedule shall be as specified in Table II below",
+          "retrieval_score": 0.5931360721588135,
+          "matched_evidence": [],
+          "excerpt": "Schedule shall be as specified in Table II below:- TABLE -II The maximum permissible errors on net quantities declared by length, area or number Sl. No. Quantity Declared Maximum permissible error in excess or in deficiency (i) in units of "
+        },
+        {
+          "chunk_id": "621a3c03bb7d3147c7b17251",
+          "page": 38,
+          "section": "7. Mandatory Declarations",
+          "retrieval_score": 0.48035043478012085,
+          "matched_evidence": [
+            "7. Mandatory Declarations",
+            "7(1)"
+          ],
+          "excerpt": "7. Mandatory Declarations. - (1) Wherever, packaged food contains ingredients and /or additives as stated in schedule -II of these regulations, the same shall be prominently displayed on the label. The size of numerals and letters for the d"
+        },
+        {
+          "chunk_id": "02a0405778c277095e87d418",
+          "page": 40,
+          "section": "Schedule First/ Second",
+          "retrieval_score": 0.4690936207771301,
+          "matched_evidence": [],
+          "excerpt": "Schedule First/ Second Page 40 of 43 Class A/ B Maximum permissible error in percentage C Sample Gross Tare Net Remarks No. Weight Weight Weight/ error Weight Checking Data 1 200 D Results Declared Wt. Avg. Wt. E GENERAL COMMENTS WITH REGAR"
+        },
+        {
+          "chunk_id": "062571092a40fddd7591dd4a",
+          "page": 33,
+          "section": "THE FOURTH SCHEDULE",
+          "retrieval_score": 0.46110403537750244,
+          "matched_evidence": [],
+          "excerpt": "THE FOURTH SCHEDULE (See Rule 1 2(2)) Exceptions referred to in Rule 12(2) 1. The following commodities in packaged form may be sold by weight, measure or number as shown against the commodity:- TABLE ---------------------------------------"
+        },
+        {
+          "chunk_id": "ba99f0e622ceef55a8c61f1d",
+          "page": 8,
+          "section": "7. Principal display panel",
+          "retrieval_score": 0.4520844519138336,
+          "matched_evidence": [
+            "7(1)"
+          ],
+          "excerpt": "7. Principal display panel-its area, size and letter etc.- (1) In the case of a package having a capac ity of five cubic cen timeters or less, the principal display panel may be a card or tape affixed firmly to the package and shall bear th"
+        }
+      ],
+      "included_in_retrieval_metrics": true,
+      "metrics": {
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.4,
+        "evidence_hits": {
+          "7. Mandatory Declarations": true,
+          "7(1)": true
+        }
+      }
+    },
+    {
+      "question": "What is the registration fee listed in Schedule 3?",
+      "category": "straightforward",
+      "expected_answer_type": "direct",
+      "expected_evidence": [
+        "SCHEDULE - 3",
+        "1. Fees for Registration Rs 100"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "b5200d7218515df870dc9d22",
+          "page": 22,
+          "section": "SCHEDULE",
+          "retrieval_score": 0.44675788283348083,
+          "matched_evidence": [
+            "SCHEDULE - 3",
+            "1. Fees for Registration Rs 100"
+          ],
+          "excerpt": "SCHEDULE - 3 (See Regulation 2.1.3) FEE FOR GRANT/ RENEWAL OF LICENSE REGISTRATION / LICENSE FEE PER ANNUM IN RUPEES 1. Fees for Registration Rs 100 2. Fees for License issued by Central Licensing Authority: Rs 7500 3. Fees for License issu"
+        },
+        {
+          "chunk_id": "a8727105810eb4e18866a3f1",
+          "page": 2,
+          "section": "Schedule 4 of these Regulations and provide a self attested declaration of adherence to these requirements with the",
+          "retrieval_score": 0.43562740087509155,
+          "matched_evidence": [],
+          "excerpt": "Schedule 4 of these Regulations and provide a self attested declaration of adherence to these requirements with the application in the format provided in Annexure-1 under Schedule 2. (3) The Registering Authority shall consider the applicat"
+        },
+        {
+          "chunk_id": "9a8c001b0ca1a137361ea1e4",
+          "page": 4,
+          "section": "2.1.7 V alidity and Renewal of Registration and License",
+          "retrieval_score": 0.4302661120891571,
+          "matched_evidence": [],
+          "excerpt": "2.1.7 V alidity and Renewal of Registration and License (1) A Registration or license granted under these Regulations shall be valid and subsisting, unless otherwise specified, for a period of 1 to 5 years as chosen by the Food Business Ope"
+        },
+        {
+          "chunk_id": "19ca2403c1509ba5865a9e6e",
+          "page": 2,
+          "section": "Schedule 4 within a period of 30 days",
+          "retrieval_score": 0.35706210136413574,
+          "matched_evidence": [],
+          "excerpt": "Schedule 4 within a period of 30 days. If registration is not granted, or denied, or inspection not ordered within 7 days as provided in above sub regulation (3) or no decision is communicated within 30 days as provided in above sub regulat"
+        },
+        {
+          "chunk_id": "d88c4a33f7593a2b72fbdab5",
+          "page": 25,
+          "section": "28. Registration of shorter address permissible",
+          "retrieval_score": 0.3501198887825012,
+          "matched_evidence": [],
+          "excerpt": "28. Registration of shorter address permissible.- (1) It shall be lawful for any manufacturer or packer to make an application to the Director or the Controller for the registration of a shorter address, in addition to the complete address "
+        }
+      ],
+      "included_in_retrieval_metrics": true,
+      "metrics": {
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "evidence_hits": {
+          "SCHEDULE - 3": true,
+          "1. Fees for Registration Rs 100": true
+        }
+      }
+    },
+    {
+      "question": "What is the minimum height of letters in a Legal Metrology declaration when the letters are blown, formed, molded, embossed or perforated?",
+      "category": "straightforward",
+      "expected_answer_type": "direct",
+      "expected_evidence": [
+        "7. Principal display panel-its area, size and letter etc.",
+        "7(3)"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "ba99f0e622ceef55a8c61f1d",
+          "page": 8,
+          "section": "7. Principal display panel",
+          "retrieval_score": 0.5367885828018188,
+          "matched_evidence": [
+            "7. Principal display panel-its area, size and letter etc.",
+            "7(3)"
+          ],
+          "excerpt": "7. Principal display panel-its area, size and letter etc.- (1) In the case of a package having a capac ity of five cubic cen timeters or less, the principal display panel may be a card or tape affixed firmly to the package and shall bear th"
+        },
+        {
+          "chunk_id": "a9f75ae85557c6ddb6685271",
+          "page": 1,
+          "section": null,
+          "retrieval_score": 0.4661186635494232,
+          "matched_evidence": [],
+          "excerpt": "The Legal Metrology (Packaged Commodities) Rules, 2011. NOTIFICATION 7th March 2011 GSR 202 (E) --- In exercise of the powers conf erred by sub-section (1) read with clause (j) and (q) of sub-section (2 ) of section 52 of the Legal Metrolog"
+        },
+        {
+          "chunk_id": "91ebc119bfb0067a260e7775",
+          "page": 17,
+          "section": "Schedule and the tests aforesaid shall be ca rried out in accordance with the method",
+          "retrieval_score": 0.40586453676223755,
+          "matched_evidence": [
+            "7(3)"
+          ],
+          "excerpt": "Schedule and the tests aforesaid shall be ca rried out in accordance with the method specified in the Sixth Schedule. (2) The Director, Controller or any Legal Metrology Officer shall enter in the Form set out in the Seventh Schedule, the d"
+        },
+        {
+          "chunk_id": "e0a3dcec259c54592f70724f",
+          "page": 9,
+          "section": "8. Declaration where to appear",
+          "retrieval_score": 0.3954011797904968,
+          "matched_evidence": [
+            "7(3)"
+          ],
+          "excerpt": "8. Declaration where to appear.- (1) Every declaration required to be made under these rules shall appear on the principal display panel. Provided that the area surrounding the quantit y declaration shall be free from printed information. ("
+        },
+        {
+          "chunk_id": "6c1fc37d62ce57ce73d575b0",
+          "page": 34,
+          "section": "1. Upto 100 3 2",
+          "retrieval_score": 0.39378049969673157,
+          "matched_evidence": [],
+          "excerpt": "1. Upto 100 3 2.5 6 2. Above 100 to 500 4 3.5 8 3. Above 500 to 2500 6 5 12 4. Above 2500 8 7 16 (d) Declaration regarding Veg. or Non-Veg shall also be prominently displayed as provided in this regulation on the pamphlets, leaflets and adv"
+        }
+      ],
+      "included_in_retrieval_metrics": true,
+      "metrics": {
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.6,
+        "evidence_hits": {
+          "7. Principal display panel-its area, size and letter etc.": true,
+          "7(3)": true
+        }
+      }
+    },
+    {
+      "question": "I make homemade pickles in a small kitchen and sell them through Instagram. Do I need FSSAI registration or a license?",
+      "category": "situation_specific",
+      "expected_answer_type": "direct",
+      "expected_evidence": [
+        "2.1 Registration and Licensing of Food Business",
+        "2.1.1 Registration of Petty Food Business",
+        "4. Petty Food Manufacturer"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "19ca2403c1509ba5865a9e6e",
+          "page": 2,
+          "section": "Schedule 4 within a period of 30 days",
+          "retrieval_score": 0.47776347398757935,
+          "matched_evidence": [],
+          "excerpt": "Schedule 4 within a period of 30 days. If registration is not granted, or denied, or inspection not ordered within 7 days as provided in above sub regulation (3) or no decision is communicated within 30 days as provided in above sub regulat"
+        },
+        {
+          "chunk_id": "b72a62897726389db631d910",
+          "page": 2,
+          "section": "5. Registering Authority\u201d means Designated Officer/ Food Safety Officer or any official in Panchayat, Municipal",
+          "retrieval_score": 0.4565378725528717,
+          "matched_evidence": [
+            "2.1 Registration and Licensing of Food Business",
+            "2.1.1 Registration of Petty Food Business"
+          ],
+          "excerpt": "5. Registering Authority\u201d means Designated Officer/ Food Safety Officer or any official in Panchayat, Municipal Corporation or any other local body or Panchayat in an area, notified as such by the State Food Safety Commissioner for the purp"
+        },
+        {
+          "chunk_id": "743620fcf4bac2046c739f9c",
+          "page": 14,
+          "section": "14. The manufacturer/importer/distributor shall buy and sell food products only from, or to, licensed/registered vendors",
+          "retrieval_score": 0.45379775762557983,
+          "matched_evidence": [],
+          "excerpt": "14. The manufacturer/importer/distributor shall buy and sell food products only from, or to, licensed/registered vendors and maintain record thereof. Other conditions 1. Proprietors of hotels, restaurants and other food stalls who sell or e"
+        },
+        {
+          "chunk_id": "b699ee8a93351a1d6765940c",
+          "page": 3,
+          "section": "2.1.2 License for food business",
+          "retrieval_score": 0.4465711712837219,
+          "matched_evidence": [
+            "2.1.1 Registration of Petty Food Business"
+          ],
+          "excerpt": "2.1.2 License for food business (1) Subject to Regulation 2.1.1, no person shall commence any food business unless he possesses a valid license. Provided that any person or Food Business Operator carrying on food business on the date of not"
+        },
+        {
+          "chunk_id": "9392f105d99594a7991bbe44",
+          "page": 5,
+          "section": "2.1.9 Modifications, Expansion or Changes in premise(s) after grant of license or registration",
+          "retrieval_score": 0.4174654483795166,
+          "matched_evidence": [],
+          "excerpt": "2.1.9 Modifications, Expansion or Changes in premise(s) after grant of license or registration (1) Food Business Operators shall ensure that the Registering or Licensing Authority always has up-to-date information on their food business est"
+        }
+      ],
+      "included_in_retrieval_metrics": true,
+      "metrics": {
+        "recall_at_3": 0.6666666666666666,
+        "recall_at_5": 0.6666666666666666,
+        "precision_at_5": 0.4,
+        "evidence_hits": {
+          "2.1 Registration and Licensing of Food Business": true,
+          "2.1.1 Registration of Petty Food Business": true,
+          "4. Petty Food Manufacturer": false
+        }
+      }
+    },
+    {
+      "question": "I run a home bakery with annual turnover below Rs 12 lakhs and sell cakes directly to local customers. Which FSSAI process applies to me?",
+      "category": "situation_specific",
+      "expected_answer_type": "direct",
+      "expected_evidence": [
+        "1.2: Definitions",
+        "4. Petty Food Manufacturer",
+        "2.1.1 Registration of Petty Food Business"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "601b7525630055c3010f5fde",
+          "page": 15,
+          "section": "5. Every sale or movement of stocks of solvent",
+          "retrieval_score": 0.41474470496177673,
+          "matched_evidence": [],
+          "excerpt": "5. Every sale or movement of stocks of solvent-extracted oil, 'semi refined' or 'raw grade I', edible groundnut flour or edible coconut flour, or both by the producer shall be a sale or movement of stocks directly to a registered user and n"
+        },
+        {
+          "chunk_id": "415eb40acab91f194a46e185",
+          "page": 24,
+          "section": "CHAPTER VI",
+          "retrieval_score": 0.40493860840797424,
+          "matched_evidence": [],
+          "excerpt": "CHAPTER VI REGISTRATION OF MANUFACTURERS AND PACKERS 27. Registration of manufacturers, packers and importers.- (1) Every individual, firm, Hindu undivided family, society, company or corporation who or which pre-packs or imports any commod"
+        },
+        {
+          "chunk_id": "743620fcf4bac2046c739f9c",
+          "page": 14,
+          "section": "14. The manufacturer/importer/distributor shall buy and sell food products only from, or to, licensed/registered vendors",
+          "retrieval_score": 0.39941105246543884,
+          "matched_evidence": [],
+          "excerpt": "14. The manufacturer/importer/distributor shall buy and sell food products only from, or to, licensed/registered vendors and maintain record thereof. Other conditions 1. Proprietors of hotels, restaurants and other food stalls who sell or e"
+        },
+        {
+          "chunk_id": "b5200d7218515df870dc9d22",
+          "page": 22,
+          "section": "SCHEDULE",
+          "retrieval_score": 0.38178011775016785,
+          "matched_evidence": [],
+          "excerpt": "SCHEDULE - 3 (See Regulation 2.1.3) FEE FOR GRANT/ RENEWAL OF LICENSE REGISTRATION / LICENSE FEE PER ANNUM IN RUPEES 1. Fees for Registration Rs 100 2. Fees for License issued by Central Licensing Authority: Rs 7500 3. Fees for License issu"
+        },
+        {
+          "chunk_id": "ce1aee07f2f75f20ffab3562",
+          "page": 22,
+          "section": "Schedule 4",
+          "retrieval_score": 0.38077229261398315,
+          "matched_evidence": [
+            "2.1.1 Registration of Petty Food Business"
+          ],
+          "excerpt": "Schedule 4 (See Regulation 2.1.2) General Hygienic and Sanitary practices to be followed by Food Business operators It is hereby recognized and declared as a matter of legislative determination that in the field of human nutrition, safe, cl"
+        }
+      ],
+      "included_in_retrieval_metrics": true,
+      "metrics": {
+        "recall_at_3": 0.0,
+        "recall_at_5": 0.3333333333333333,
+        "precision_at_5": 0.2,
+        "evidence_hits": {
+          "1.2: Definitions": false,
+          "4. Petty Food Manufacturer": false,
+          "2.1.1 Registration of Petty Food Business": true
+        }
+      }
+    },
+    {
+      "question": "I sell packaged spice mixes online. How should I order the ingredients on the label?",
+      "category": "situation_specific",
+      "expected_answer_type": "direct",
+      "expected_evidence": [
+        "5. Labelling Requirements",
+        "5(2) List of Ingredients",
+        "5(2)(b)"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "92a8cf7942c55a4308126c5a",
+          "page": 30,
+          "section": "5. Labelling Requirements",
+          "retrieval_score": 0.47742360830307007,
+          "matched_evidence": [
+            "5. Labelling Requirements",
+            "5(2) List of Ingredients"
+          ],
+          "excerpt": "5. Labelling Requirements. -In addition to general requirements specified in Regulation 4, every package shall carry the following information on the label, namely,- (1) The Name of Food: Every package of food shall carry name of the food w"
+        },
+        {
+          "chunk_id": "5c6ee95390964251ea8abb20",
+          "page": 46,
+          "section": "2. Specific requirements/ restrictions on manner of labelling",
+          "retrieval_score": 0.4632664620876312,
+          "matched_evidence": [],
+          "excerpt": "2. Specific requirements/ restrictions on manner of labelling 2.1 Labelling of edible oils and fats (1) The package, label or the advertisement of edible refined vegetable oils and fats shall not use any exaggerated expressions like \u201cSuper-"
+        },
+        {
+          "chunk_id": "fa2d57aed0d178d1ddecf7e9",
+          "page": 40,
+          "section": "12. Labelling of Pre",
+          "retrieval_score": 0.4338299036026001,
+          "matched_evidence": [],
+          "excerpt": "12. Labelling of Pre-packaged Food Additives Sold other than by Retail Every package of a food additive meant for sale other than in Retail shall carry label in accordance to chapter 4 and regulation 10 of these regulations except the claus"
+        },
+        {
+          "chunk_id": "621a3c03bb7d3147c7b17251",
+          "page": 38,
+          "section": "7. Mandatory Declarations",
+          "retrieval_score": 0.41599634289741516,
+          "matched_evidence": [
+            "5(2) List of Ingredients"
+          ],
+          "excerpt": "7. Mandatory Declarations. - (1) Wherever, packaged food contains ingredients and /or additives as stated in schedule -II of these regulations, the same shall be prominently displayed on the label. The size of numerals and letters for the d"
+        },
+        {
+          "chunk_id": "fe36cef4c6c74e14de7f5124",
+          "page": 40,
+          "section": "CHAPTER 5",
+          "retrieval_score": 0.4051046073436737,
+          "matched_evidence": [
+            "5(2) List of Ingredients"
+          ],
+          "excerpt": "CHAPTER 5 LABELLING OF FOOD ADDITIVES WHEN SOLD AS SUCH 11. Labelling of packaged Food Additives for Retail Sale (1) Every package of a food additive meant for retail sale to the consumer shall be labelled in accordance with the Food Safety"
+        }
+      ],
+      "included_in_retrieval_metrics": true,
+      "metrics": {
+        "recall_at_3": 0.6666666666666666,
+        "recall_at_5": 0.6666666666666666,
+        "precision_at_5": 0.6,
+        "evidence_hits": {
+          "5. Labelling Requirements": true,
+          "5(2) List of Ingredients": true,
+          "5(2)(b)": false
+        }
+      }
+    },
+    {
+      "question": "I sell a packaged snack with a shelf life of five days. Do I need to print both the manufacture date and expiry date?",
+      "category": "situation_specific",
+      "expected_answer_type": "direct",
+      "expected_evidence": [
+        "5. Labelling Requirements",
+        "5(10)(a)",
+        "8. Exemptions from certain labelling requirements-",
+        "8(3)"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "c123482f37fbebf3c2e5e40e",
+          "page": 28,
+          "section": null,
+          "retrieval_score": 0.6009141206741333,
+          "matched_evidence": [
+            "8(3)"
+          ],
+          "excerpt": "(3) They shall come into force on the date of their publication in the Official Gazette and Food Business Operator shall comply with all the provisions of these regulations after one year from the date of their pub lication in the Official "
+        },
+        {
+          "chunk_id": "6c1fc37d62ce57ce73d575b0",
+          "page": 34,
+          "section": "1. Upto 100 3 2",
+          "retrieval_score": 0.5929687023162842,
+          "matched_evidence": [],
+          "excerpt": "1. Upto 100 3 2.5 6 2. Above 100 to 500 4 3.5 8 3. Above 500 to 2500 6 5 12 4. Above 2500 8 7 16 (d) Declaration regarding Veg. or Non-Veg shall also be prominently displayed as provided in this regulation on the pamphlets, leaflets and adv"
+        },
+        {
+          "chunk_id": "1d90b2df01c16f55574be12f",
+          "page": 27,
+          "section": "5.1.2 All raw materials, food additives and ingredients, wherever applicable, shall conform to all the Regulations",
+          "retrieval_score": 0.4973616600036621,
+          "matched_evidence": [],
+          "excerpt": "5.1.2 All raw materials, food additives and ingredients, wherever applicable, shall conform to all the Regulations and standards laid down under the Act. 5.1.3 Records of raw materials, food additives and ingredients as well as their source"
+        },
+        {
+          "chunk_id": "df395f3b842ace1977619783",
+          "page": 28,
+          "section": "5.2.3 Segregation shall be provided for the storage of raw, processed, rejected, recalled or returned materials",
+          "retrieval_score": 0.4865443706512451,
+          "matched_evidence": [],
+          "excerpt": "5.2.3 Segregation shall be provided for the storage of raw, processed, rejected, recalled or returned materials or products which will be distinguishably marked and secured. Raw materials and food shall be stored in separate areas from prin"
+        },
+        {
+          "chunk_id": "56d471bc088ae2e7190a3c06",
+          "page": 52,
+          "section": "1. It is very important to store food properly for the purpose of food safety",
+          "retrieval_score": 0.4685438871383667,
+          "matched_evidence": [],
+          "excerpt": "1. It is very important to store food properly for the purpose of food safety. Following things must be ensured: z Foods should be cooked, stored and kept at right temperature z Raw meat/poultry should be stored separately from other foods "
+        }
+      ],
+      "included_in_retrieval_metrics": true,
+      "metrics": {
+        "recall_at_3": 0.25,
+        "recall_at_5": 0.25,
+        "precision_at_5": 0.2,
+        "evidence_hits": {
+          "5. Labelling Requirements": false,
+          "5(10)(a)": false,
+          "8. Exemptions from certain labelling requirements-": false,
+          "8(3)": true
+        }
+      }
+    },
+    {
+      "question": "I sell a single-ingredient product in a package smaller than 100 square centimetres. Which label details may be exempted?",
+      "category": "situation_specific",
+      "expected_answer_type": "direct",
+      "expected_evidence": [
+        "8. Exemptions from certain labelling requirements-",
+        "8(1)"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "621a3c03bb7d3147c7b17251",
+          "page": 38,
+          "section": "7. Mandatory Declarations",
+          "retrieval_score": 0.6890957951545715,
+          "matched_evidence": [
+            "8. Exemptions from certain labelling requirements-",
+            "8(1)"
+          ],
+          "excerpt": "7. Mandatory Declarations. - (1) Wherever, packaged food contains ingredients and /or additives as stated in schedule -II of these regulations, the same shall be prominently displayed on the label. The size of numerals and letters for the d"
+        },
+        {
+          "chunk_id": "fa2d57aed0d178d1ddecf7e9",
+          "page": 40,
+          "section": "12. Labelling of Pre",
+          "retrieval_score": 0.6148393154144287,
+          "matched_evidence": [],
+          "excerpt": "12. Labelling of Pre-packaged Food Additives Sold other than by Retail Every package of a food additive meant for sale other than in Retail shall carry label in accordance to chapter 4 and regulation 10 of these regulations except the claus"
+        },
+        {
+          "chunk_id": "92a8cf7942c55a4308126c5a",
+          "page": 30,
+          "section": "5. Labelling Requirements",
+          "retrieval_score": 0.6105375289916992,
+          "matched_evidence": [
+            "8(1)"
+          ],
+          "excerpt": "5. Labelling Requirements. -In addition to general requirements specified in Regulation 4, every package shall carry the following information on the label, namely,- (1) The Name of Food: Every package of food shall carry name of the food w"
+        },
+        {
+          "chunk_id": "fe36cef4c6c74e14de7f5124",
+          "page": 40,
+          "section": "CHAPTER 5",
+          "retrieval_score": 0.5634280443191528,
+          "matched_evidence": [
+            "8(1)"
+          ],
+          "excerpt": "CHAPTER 5 LABELLING OF FOOD ADDITIVES WHEN SOLD AS SUCH 11. Labelling of packaged Food Additives for Retail Sale (1) Every package of a food additive meant for retail sale to the consumer shall be labelled in accordance with the Food Safety"
+        },
+        {
+          "chunk_id": "d9b902ced1509a7c28424c67",
+          "page": 5,
+          "section": "6. Declarations to be made on every package",
+          "retrieval_score": 0.5613582730293274,
+          "matched_evidence": [
+            "8(1)"
+          ],
+          "excerpt": "6. Declarations to be made on every package. \u2013 (1) Every package shall bear thereon or on th e label securely affixed thereto, a definite, plain and conspicuous declaration made in acco rdance with the provisions of this chapter as, to - (a"
+        }
+      ],
+      "included_in_retrieval_metrics": true,
+      "metrics": {
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.8,
+        "evidence_hits": {
+          "8. Exemptions from certain labelling requirements-": true,
+          "8(1)": true
+        }
+      }
+    },
+    {
+      "question": "I sell packaged food through a retail shop, and I am both the brand owner and the packer. What name and address wording should appear on my label?",
+      "category": "situation_specific",
+      "expected_answer_type": "direct",
+      "expected_evidence": [
+        "5. Labelling Requirements",
+        "5(6) Declaration of name and complete address",
+        "5(6)(a)"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "d9b902ced1509a7c28424c67",
+          "page": 5,
+          "section": "6. Declarations to be made on every package",
+          "retrieval_score": 0.6839007139205933,
+          "matched_evidence": [],
+          "excerpt": "6. Declarations to be made on every package. \u2013 (1) Every package shall bear thereon or on th e label securely affixed thereto, a definite, plain and conspicuous declaration made in acco rdance with the provisions of this chapter as, to - (a"
+        },
+        {
+          "chunk_id": "92a8cf7942c55a4308126c5a",
+          "page": 30,
+          "section": "5. Labelling Requirements",
+          "retrieval_score": 0.6037451028823853,
+          "matched_evidence": [
+            "5. Labelling Requirements"
+          ],
+          "excerpt": "5. Labelling Requirements. -In addition to general requirements specified in Regulation 4, every package shall carry the following information on the label, namely,- (1) The Name of Food: Every package of food shall carry name of the food w"
+        },
+        {
+          "chunk_id": "4107d5c89d7ee53dc5f67eba",
+          "page": 10,
+          "section": "10. Declaration of name and address of the manufacturer, etc",
+          "retrieval_score": 0.593241810798645,
+          "matched_evidence": [],
+          "excerpt": "10. Declaration of name and address of the manufacturer, etc.- Page 10 of 43 (1) Subject to the provisions of rule 6, every package kept, offered or exposed for sale or sold shall bear conspicuously on it, the name and complete address of t"
+        },
+        {
+          "chunk_id": "fe36cef4c6c74e14de7f5124",
+          "page": 40,
+          "section": "CHAPTER 5",
+          "retrieval_score": 0.5600497126579285,
+          "matched_evidence": [],
+          "excerpt": "CHAPTER 5 LABELLING OF FOOD ADDITIVES WHEN SOLD AS SUCH 11. Labelling of packaged Food Additives for Retail Sale (1) Every package of a food additive meant for retail sale to the consumer shall be labelled in accordance with the Food Safety"
+        },
+        {
+          "chunk_id": "fa2d57aed0d178d1ddecf7e9",
+          "page": 40,
+          "section": "12. Labelling of Pre",
+          "retrieval_score": 0.5152475833892822,
+          "matched_evidence": [],
+          "excerpt": "12. Labelling of Pre-packaged Food Additives Sold other than by Retail Every package of a food additive meant for sale other than in Retail shall carry label in accordance to chapter 4 and regulation 10 of these regulations except the claus"
+        }
+      ],
+      "included_in_retrieval_metrics": true,
+      "metrics": {
+        "recall_at_3": 0.3333333333333333,
+        "recall_at_5": 0.3333333333333333,
+        "precision_at_5": 0.2,
+        "evidence_hits": {
+          "5. Labelling Requirements": true,
+          "5(6) Declaration of name and complete address": false,
+          "5(6)(a)": false
+        }
+      }
+    },
+    {
+      "question": "I sell packaged food in India and want to print only the FSSAI label information. Do I also need the Legal Metrology declarations such as net quantity and MRP?",
+      "category": "ambiguous",
+      "expected_answer_type": "direct",
+      "expected_evidence": [
+        "5. Labelling Requirements",
+        "5(7) Declaration and manner of declaration of Net quantity, Retail Sale Price and Consumer Care details",
+        "6. Declarations to be made on every package.",
+        "7. Principal display panel-its area, size and letter etc."
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "fa2d57aed0d178d1ddecf7e9",
+          "page": 40,
+          "section": "12. Labelling of Pre",
+          "retrieval_score": 0.6856234669685364,
+          "matched_evidence": [],
+          "excerpt": "12. Labelling of Pre-packaged Food Additives Sold other than by Retail Every package of a food additive meant for sale other than in Retail shall carry label in accordance to chapter 4 and regulation 10 of these regulations except the claus"
+        },
+        {
+          "chunk_id": "4923be0031c1a3238e40a561",
+          "page": 16,
+          "section": "5. Category of License",
+          "retrieval_score": 0.6589565277099609,
+          "matched_evidence": [],
+          "excerpt": "5. Category of License: This license is granted under and is subject to the provisions of FSS Act, 2006 all of which must be complied with by the licensee. Place: Date: Stamp and signature of Designated Officer Food Safety and Standards Aut"
+        },
+        {
+          "chunk_id": "621a3c03bb7d3147c7b17251",
+          "page": 38,
+          "section": "7. Mandatory Declarations",
+          "retrieval_score": 0.5952905416488647,
+          "matched_evidence": [],
+          "excerpt": "7. Mandatory Declarations. - (1) Wherever, packaged food contains ingredients and /or additives as stated in schedule -II of these regulations, the same shall be prominently displayed on the label. The size of numerals and letters for the d"
+        },
+        {
+          "chunk_id": "92a8cf7942c55a4308126c5a",
+          "page": 30,
+          "section": "5. Labelling Requirements",
+          "retrieval_score": 0.5744883418083191,
+          "matched_evidence": [
+            "5. Labelling Requirements"
+          ],
+          "excerpt": "5. Labelling Requirements. -In addition to general requirements specified in Regulation 4, every package shall carry the following information on the label, namely,- (1) The Name of Food: Every package of food shall carry name of the food w"
+        },
+        {
+          "chunk_id": "2707481e29201ea51031ea7b",
+          "page": 20,
+          "section": "21. Inspection of quantity and error in packages at the premises of the wholesale",
+          "retrieval_score": 0.5697518587112427,
+          "matched_evidence": [],
+          "excerpt": "21. Inspection of quantity and error in packages at the premises of the wholesale dealer or retail dealer (1) Ordinarily, any test in relation to the net quantity contained in a package shall not be carried out at the premises of the retail"
+        }
+      ],
+      "included_in_retrieval_metrics": true,
+      "metrics": {
+        "recall_at_3": 0.0,
+        "recall_at_5": 0.25,
+        "precision_at_5": 0.2,
+        "evidence_hits": {
+          "5. Labelling Requirements": true,
+          "5(7) Declaration and manner of declaration of Net quantity, Retail Sale Price and Consumer Care details": false,
+          "6. Declarations to be made on every package.": false,
+          "7. Principal display panel-its area, size and letter etc.": false
+        }
+      }
+    },
+    {
+      "question": "For a packaged food product, which authority's rules determine the required name, address, net quantity and retail sale price declarations?",
+      "category": "ambiguous",
+      "expected_answer_type": "direct",
+      "expected_evidence": [
+        "5. Labelling Requirements",
+        "5(6) Declaration of name and complete address",
+        "6. Declarations to be made on every package.",
+        "10. Declaration of name and address of the manufacturer, etc."
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "92a8cf7942c55a4308126c5a",
+          "page": 30,
+          "section": "5. Labelling Requirements",
+          "retrieval_score": 0.6723103523254395,
+          "matched_evidence": [
+            "5. Labelling Requirements"
+          ],
+          "excerpt": "5. Labelling Requirements. -In addition to general requirements specified in Regulation 4, every package shall carry the following information on the label, namely,- (1) The Name of Food: Every package of food shall carry name of the food w"
+        },
+        {
+          "chunk_id": "fe36cef4c6c74e14de7f5124",
+          "page": 40,
+          "section": "CHAPTER 5",
+          "retrieval_score": 0.6655529737472534,
+          "matched_evidence": [],
+          "excerpt": "CHAPTER 5 LABELLING OF FOOD ADDITIVES WHEN SOLD AS SUCH 11. Labelling of packaged Food Additives for Retail Sale (1) Every package of a food additive meant for retail sale to the consumer shall be labelled in accordance with the Food Safety"
+        },
+        {
+          "chunk_id": "d9b902ced1509a7c28424c67",
+          "page": 5,
+          "section": "6. Declarations to be made on every package",
+          "retrieval_score": 0.664901852607727,
+          "matched_evidence": [
+            "6. Declarations to be made on every package."
+          ],
+          "excerpt": "6. Declarations to be made on every package. \u2013 (1) Every package shall bear thereon or on th e label securely affixed thereto, a definite, plain and conspicuous declaration made in acco rdance with the provisions of this chapter as, to - (a"
+        },
+        {
+          "chunk_id": "4107d5c89d7ee53dc5f67eba",
+          "page": 10,
+          "section": "10. Declaration of name and address of the manufacturer, etc",
+          "retrieval_score": 0.6639887094497681,
+          "matched_evidence": [
+            "10. Declaration of name and address of the manufacturer, etc."
+          ],
+          "excerpt": "10. Declaration of name and address of the manufacturer, etc.- Page 10 of 43 (1) Subject to the provisions of rule 6, every package kept, offered or exposed for sale or sold shall bear conspicuously on it, the name and complete address of t"
+        },
+        {
+          "chunk_id": "c123482f37fbebf3c2e5e40e",
+          "page": 28,
+          "section": null,
+          "retrieval_score": 0.6578457355499268,
+          "matched_evidence": [],
+          "excerpt": "(3) They shall come into force on the date of their publication in the Official Gazette and Food Business Operator shall comply with all the provisions of these regulations after one year from the date of their pub lication in the Official "
+        }
+      ],
+      "included_in_retrieval_metrics": true,
+      "metrics": {
+        "recall_at_3": 0.5,
+        "recall_at_5": 0.75,
+        "precision_at_5": 0.6,
+        "evidence_hits": {
+          "5. Labelling Requirements": true,
+          "5(6) Declaration of name and complete address": false,
+          "6. Declarations to be made on every package.": true,
+          "10. Declaration of name and address of the manufacturer, etc.": true
+        }
+      }
+    },
+    {
+      "question": "My food label has an FSSAI date declaration and a Legal Metrology date declaration that appear different. Which date rules should I compare before finalizing the label?",
+      "category": "ambiguous",
+      "expected_answer_type": "direct",
+      "expected_evidence": [
+        "5. Labelling Requirements",
+        "5(10) Date marking",
+        "6. Declarations to be made on every package.",
+        "6(1)(g)"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "c123482f37fbebf3c2e5e40e",
+          "page": 28,
+          "section": null,
+          "retrieval_score": 0.6353554129600525,
+          "matched_evidence": [],
+          "excerpt": "(3) They shall come into force on the date of their publication in the Official Gazette and Food Business Operator shall comply with all the provisions of these regulations after one year from the date of their pub lication in the Official "
+        },
+        {
+          "chunk_id": "6c1fc37d62ce57ce73d575b0",
+          "page": 34,
+          "section": "1. Upto 100 3 2",
+          "retrieval_score": 0.5642914772033691,
+          "matched_evidence": [],
+          "excerpt": "1. Upto 100 3 2.5 6 2. Above 100 to 500 4 3.5 8 3. Above 500 to 2500 6 5 12 4. Above 2500 8 7 16 (d) Declaration regarding Veg. or Non-Veg shall also be prominently displayed as provided in this regulation on the pamphlets, leaflets and adv"
+        },
+        {
+          "chunk_id": "fa2d57aed0d178d1ddecf7e9",
+          "page": 40,
+          "section": "12. Labelling of Pre",
+          "retrieval_score": 0.49816781282424927,
+          "matched_evidence": [],
+          "excerpt": "12. Labelling of Pre-packaged Food Additives Sold other than by Retail Every package of a food additive meant for sale other than in Retail shall carry label in accordance to chapter 4 and regulation 10 of these regulations except the claus"
+        },
+        {
+          "chunk_id": "a9f75ae85557c6ddb6685271",
+          "page": 1,
+          "section": null,
+          "retrieval_score": 0.48232531547546387,
+          "matched_evidence": [],
+          "excerpt": "The Legal Metrology (Packaged Commodities) Rules, 2011. NOTIFICATION 7th March 2011 GSR 202 (E) --- In exercise of the powers conf erred by sub-section (1) read with clause (j) and (q) of sub-section (2 ) of section 52 of the Legal Metrolog"
+        },
+        {
+          "chunk_id": "91ebc119bfb0067a260e7775",
+          "page": 17,
+          "section": "Schedule and the tests aforesaid shall be ca rried out in accordance with the method",
+          "retrieval_score": 0.48181185126304626,
+          "matched_evidence": [],
+          "excerpt": "Schedule and the tests aforesaid shall be ca rried out in accordance with the method specified in the Sixth Schedule. (2) The Director, Controller or any Legal Metrology Officer shall enter in the Form set out in the Seventh Schedule, the d"
+        }
+      ],
+      "included_in_retrieval_metrics": true,
+      "metrics": {
+        "recall_at_3": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "evidence_hits": {
+          "5. Labelling Requirements": false,
+          "5(10) Date marking": false,
+          "6. Declarations to be made on every package.": false,
+          "6(1)(g)": false
+        }
+      }
+    },
+    {
+      "question": "I sell a packaged product in a very small container. How do the FSSAI small-package exemptions interact with Legal Metrology display-panel and declaration rules?",
+      "category": "ambiguous",
+      "expected_answer_type": "direct",
+      "expected_evidence": [
+        "8. Exemptions from certain labelling requirements-",
+        "8(1)",
+        "7. Principal display panel-its area, size and letter etc.",
+        "7(1)"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "2707481e29201ea51031ea7b",
+          "page": 20,
+          "section": "21. Inspection of quantity and error in packages at the premises of the wholesale",
+          "retrieval_score": 0.645710289478302,
+          "matched_evidence": [
+            "8(1)",
+            "7(1)"
+          ],
+          "excerpt": "21. Inspection of quantity and error in packages at the premises of the wholesale dealer or retail dealer (1) Ordinarily, any test in relation to the net quantity contained in a package shall not be carried out at the premises of the retail"
+        },
+        {
+          "chunk_id": "621a3c03bb7d3147c7b17251",
+          "page": 38,
+          "section": "7. Mandatory Declarations",
+          "retrieval_score": 0.6183838844299316,
+          "matched_evidence": [
+            "8. Exemptions from certain labelling requirements-",
+            "8(1)",
+            "7(1)"
+          ],
+          "excerpt": "7. Mandatory Declarations. - (1) Wherever, packaged food contains ingredients and /or additives as stated in schedule -II of these regulations, the same shall be prominently displayed on the label. The size of numerals and letters for the d"
+        },
+        {
+          "chunk_id": "a9f75ae85557c6ddb6685271",
+          "page": 1,
+          "section": null,
+          "retrieval_score": 0.612491250038147,
+          "matched_evidence": [
+            "8(1)",
+            "7(1)"
+          ],
+          "excerpt": "The Legal Metrology (Packaged Commodities) Rules, 2011. NOTIFICATION 7th March 2011 GSR 202 (E) --- In exercise of the powers conf erred by sub-section (1) read with clause (j) and (q) of sub-section (2 ) of section 52 of the Legal Metrolog"
+        },
+        {
+          "chunk_id": "74faf528a436320e0d2164f5",
+          "page": 17,
+          "section": "19. Inspection of quantity and error in packages at the premises of the",
+          "retrieval_score": 0.6081600189208984,
+          "matched_evidence": [
+            "8(1)",
+            "7(1)"
+          ],
+          "excerpt": "19. Inspection of quantity and error in packages at the premises of the manufacturer or packer.\u2014 (1) With a view to ascertaining whether any package or lot of packages complies with provisions of these rules in all respects, the Director, C"
+        },
+        {
+          "chunk_id": "2296f54af2cd7c3b5db8772a",
+          "page": 23,
+          "section": "CHAPTER III",
+          "retrieval_score": 0.57114577293396,
+          "matched_evidence": [],
+          "excerpt": "CHAPTER III PROVISIONS APPLICABLE TO WHOLESALE PACKAGES 24. Declarations applicable to be made on every wholesale package Every wholesale package shall bear thereon a legible, definite, plain and conspicuous declaration as to \u2013 (a) The name"
+        }
+      ],
+      "included_in_retrieval_metrics": true,
+      "metrics": {
+        "recall_at_3": 0.75,
+        "recall_at_5": 0.75,
+        "precision_at_5": 0.8,
+        "evidence_hits": {
+          "8. Exemptions from certain labelling requirements-": true,
+          "8(1)": true,
+          "7. Principal display panel-its area, size and letter etc.": false,
+          "7(1)": true
+        }
+      }
+    },
+    {
+      "question": "If my product is sold in multiple inner packages inside one outer package, where should the required declarations appear?",
+      "category": "ambiguous",
+      "expected_answer_type": "direct",
+      "expected_evidence": [
+        "5. Labelling Requirements",
+        "5(7) Declaration and manner of declaration of Net quantity, Retail Sale Price and Consumer Care details",
+        "9. Manner in which declaration shall be made.",
+        "9(3)"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "2296f54af2cd7c3b5db8772a",
+          "page": 23,
+          "section": "CHAPTER III",
+          "retrieval_score": 0.631551206111908,
+          "matched_evidence": [],
+          "excerpt": "CHAPTER III PROVISIONS APPLICABLE TO WHOLESALE PACKAGES 24. Declarations applicable to be made on every wholesale package Every wholesale package shall bear thereon a legible, definite, plain and conspicuous declaration as to \u2013 (a) The name"
+        },
+        {
+          "chunk_id": "4107d5c89d7ee53dc5f67eba",
+          "page": 10,
+          "section": "10. Declaration of name and address of the manufacturer, etc",
+          "retrieval_score": 0.6004015803337097,
+          "matched_evidence": [],
+          "excerpt": "10. Declaration of name and address of the manufacturer, etc.- Page 10 of 43 (1) Subject to the provisions of rule 6, every package kept, offered or exposed for sale or sold shall bear conspicuously on it, the name and complete address of t"
+        },
+        {
+          "chunk_id": "b7ed6c6023d14e7cf7584586",
+          "page": 40,
+          "section": "7. Checking of other declarations",
+          "retrieval_score": 0.5674585103988647,
+          "matched_evidence": [],
+          "excerpt": "7. Checking of other declarations.-(1) The de clarations made on the package or on the label affixed thereto, shall be examined with a view to ascertaining whether such declarations conform to these rules and may be ensured either at the fa"
+        },
+        {
+          "chunk_id": "e0a3dcec259c54592f70724f",
+          "page": 9,
+          "section": "8. Declaration where to appear",
+          "retrieval_score": 0.5670251250267029,
+          "matched_evidence": [
+            "9. Manner in which declaration shall be made.",
+            "9(3)"
+          ],
+          "excerpt": "8. Declaration where to appear.- (1) Every declaration required to be made under these rules shall appear on the principal display panel. Provided that the area surrounding the quantit y declaration shall be free from printed information. ("
+        },
+        {
+          "chunk_id": "d9b902ced1509a7c28424c67",
+          "page": 5,
+          "section": "6. Declarations to be made on every package",
+          "retrieval_score": 0.5583747625350952,
+          "matched_evidence": [
+            "9(3)"
+          ],
+          "excerpt": "6. Declarations to be made on every package. \u2013 (1) Every package shall bear thereon or on th e label securely affixed thereto, a definite, plain and conspicuous declaration made in acco rdance with the provisions of this chapter as, to - (a"
+        }
+      ],
+      "included_in_retrieval_metrics": true,
+      "metrics": {
+        "recall_at_3": 0.0,
+        "recall_at_5": 0.5,
+        "precision_at_5": 0.4,
+        "evidence_hits": {
+          "5. Labelling Requirements": false,
+          "5(7) Declaration and manner of declaration of Net quantity, Retail Sale Price and Consumer Care details": false,
+          "9. Manner in which declaration shall be made.": true,
+          "9(3)": true
+        }
+      }
+    },
+    {
+      "question": "Do these documents tell me whether recycled plastic is permitted for my food packaging?",
+      "category": "out_of_scope",
+      "expected_answer_type": "hand_off",
+      "expected_evidence": null,
+      "retrieved": [
+        {
+          "chunk_id": "df395f3b842ace1977619783",
+          "page": 28,
+          "section": "5.2.3 Segregation shall be provided for the storage of raw, processed, rejected, recalled or returned materials",
+          "retrieval_score": 0.529968798160553,
+          "matched_evidence": [],
+          "excerpt": "5.2.3 Segregation shall be provided for the storage of raw, processed, rejected, recalled or returned materials or products which will be distinguishably marked and secured. Raw materials and food shall be stored in separate areas from prin"
+        },
+        {
+          "chunk_id": "cfe238f2d662222f23f6dd4b",
+          "page": 28,
+          "section": "5.4.3 Packaging materials or gases where used, shall be non",
+          "retrieval_score": 0.49216562509536743,
+          "matched_evidence": [],
+          "excerpt": "5.4.3 Packaging materials or gases where used, shall be non-toxic and shall not pose a threat to the safety and suitability of food under the specified conditions of storage and use. 5.5 Food Distribution / Service 5.5.1 All critical links "
+        },
+        {
+          "chunk_id": "fa2d57aed0d178d1ddecf7e9",
+          "page": 40,
+          "section": "12. Labelling of Pre",
+          "retrieval_score": 0.4865375757217407,
+          "matched_evidence": [],
+          "excerpt": "12. Labelling of Pre-packaged Food Additives Sold other than by Retail Every package of a food additive meant for sale other than in Retail shall carry label in accordance to chapter 4 and regulation 10 of these regulations except the claus"
+        },
+        {
+          "chunk_id": "1d90b2df01c16f55574be12f",
+          "page": 27,
+          "section": "5.1.2 All raw materials, food additives and ingredients, wherever applicable, shall conform to all the Regulations",
+          "retrieval_score": 0.46583741903305054,
+          "matched_evidence": [],
+          "excerpt": "5.1.2 All raw materials, food additives and ingredients, wherever applicable, shall conform to all the Regulations and standards laid down under the Act. 5.1.3 Records of raw materials, food additives and ingredients as well as their source"
+        },
+        {
+          "chunk_id": "fd76c6e7147a35f3b33542dd",
+          "page": 28,
+          "section": "5.3 Food Processing / Preparation, Packaging and Distribution / Service",
+          "retrieval_score": 0.46515953540802,
+          "matched_evidence": [],
+          "excerpt": "5.3 Food Processing / Preparation, Packaging and Distribution / Service 5.3.1.Time and temperature control 5.3.1.1 The Food Business shall develop and maintain the systems to ensure that time and temperature are controlled effectively where"
+        }
+      ],
+      "included_in_retrieval_metrics": false,
+      "skip_reason": "expected_evidence is null",
+      "metrics": null
+    },
+    {
+      "question": "Do these documents explain how to register for GST when I start selling homemade food?",
+      "category": "out_of_scope",
+      "expected_answer_type": "hand_off",
+      "expected_evidence": null,
+      "retrieved": [
+        {
+          "chunk_id": "743620fcf4bac2046c739f9c",
+          "page": 14,
+          "section": "14. The manufacturer/importer/distributor shall buy and sell food products only from, or to, licensed/registered vendors",
+          "retrieval_score": 0.5492327809333801,
+          "matched_evidence": [],
+          "excerpt": "14. The manufacturer/importer/distributor shall buy and sell food products only from, or to, licensed/registered vendors and maintain record thereof. Other conditions 1. Proprietors of hotels, restaurants and other food stalls who sell or e"
+        },
+        {
+          "chunk_id": "b72a62897726389db631d910",
+          "page": 2,
+          "section": "5. Registering Authority\u201d means Designated Officer/ Food Safety Officer or any official in Panchayat, Municipal",
+          "retrieval_score": 0.5021159648895264,
+          "matched_evidence": [],
+          "excerpt": "5. Registering Authority\u201d means Designated Officer/ Food Safety Officer or any official in Panchayat, Municipal Corporation or any other local body or Panchayat in an area, notified as such by the State Food Safety Commissioner for the purp"
+        },
+        {
+          "chunk_id": "415eb40acab91f194a46e185",
+          "page": 24,
+          "section": "CHAPTER VI",
+          "retrieval_score": 0.48451146483421326,
+          "matched_evidence": [],
+          "excerpt": "CHAPTER VI REGISTRATION OF MANUFACTURERS AND PACKERS 27. Registration of manufacturers, packers and importers.- (1) Every individual, firm, Hindu undivided family, society, company or corporation who or which pre-packs or imports any commod"
+        },
+        {
+          "chunk_id": "c123482f37fbebf3c2e5e40e",
+          "page": 28,
+          "section": null,
+          "retrieval_score": 0.4830010235309601,
+          "matched_evidence": [],
+          "excerpt": "(3) They shall come into force on the date of their publication in the Official Gazette and Food Business Operator shall comply with all the provisions of these regulations after one year from the date of their pub lication in the Official "
+        },
+        {
+          "chunk_id": "4923be0031c1a3238e40a561",
+          "page": 16,
+          "section": "5. Category of License",
+          "retrieval_score": 0.48182421922683716,
+          "matched_evidence": [],
+          "excerpt": "5. Category of License: This license is granted under and is subject to the provisions of FSS Act, 2006 all of which must be complied with by the licensee. Place: Date: Stamp and signature of Designated Officer Food Safety and Standards Aut"
+        }
+      ],
+      "included_in_retrieval_metrics": false,
+      "skip_reason": "expected_evidence is null",
+      "metrics": null
+    },
+    {
+      "question": "What cosmetic-product packaging requirements apply to my face cream business?",
+      "category": "out_of_scope",
+      "expected_answer_type": "hand_off",
+      "expected_evidence": null,
+      "retrieved": [
+        {
+          "chunk_id": "621a3c03bb7d3147c7b17251",
+          "page": 38,
+          "section": "7. Mandatory Declarations",
+          "retrieval_score": 0.48371046781539917,
+          "matched_evidence": [],
+          "excerpt": "7. Mandatory Declarations. - (1) Wherever, packaged food contains ingredients and /or additives as stated in schedule -II of these regulations, the same shall be prominently displayed on the label. The size of numerals and letters for the d"
+        },
+        {
+          "chunk_id": "d9b902ced1509a7c28424c67",
+          "page": 5,
+          "section": "6. Declarations to be made on every package",
+          "retrieval_score": 0.4771583378314972,
+          "matched_evidence": [],
+          "excerpt": "6. Declarations to be made on every package. \u2013 (1) Every package shall bear thereon or on th e label securely affixed thereto, a definite, plain and conspicuous declaration made in acco rdance with the provisions of this chapter as, to - (a"
+        },
+        {
+          "chunk_id": "fa2d57aed0d178d1ddecf7e9",
+          "page": 40,
+          "section": "12. Labelling of Pre",
+          "retrieval_score": 0.4616345763206482,
+          "matched_evidence": [],
+          "excerpt": "12. Labelling of Pre-packaged Food Additives Sold other than by Retail Every package of a food additive meant for sale other than in Retail shall carry label in accordance to chapter 4 and regulation 10 of these regulations except the claus"
+        },
+        {
+          "chunk_id": "2296f54af2cd7c3b5db8772a",
+          "page": 23,
+          "section": "CHAPTER III",
+          "retrieval_score": 0.45267900824546814,
+          "matched_evidence": [],
+          "excerpt": "CHAPTER III PROVISIONS APPLICABLE TO WHOLESALE PACKAGES 24. Declarations applicable to be made on every wholesale package Every wholesale package shall bear thereon a legible, definite, plain and conspicuous declaration as to \u2013 (a) The name"
+        },
+        {
+          "chunk_id": "8277438947966997a0eefbd5",
+          "page": 4,
+          "section": "3. Applicability of the Chapter",
+          "retrieval_score": 0.44638898968696594,
+          "matched_evidence": [],
+          "excerpt": "3. Applicability of the Chapter- The provisions of this Chapter shall not apply to,- (a) packages of commodities containing quantity of more than 25 kg or 25 litre excluding cement and fertilizer sold in bags up to 50 kg; and (b) packaged c"
+        }
+      ],
+      "included_in_retrieval_metrics": false,
+      "skip_reason": "expected_evidence is null",
+      "metrics": null
+    },
+    {
+      "question": "What export certificates and overseas labeling rules do I need to sell my snacks outside India?",
+      "category": "out_of_scope",
+      "expected_answer_type": "hand_off",
+      "expected_evidence": null,
+      "retrieved": [
+        {
+          "chunk_id": "d2bc81cac779a2648ccf808b",
+          "page": 23,
+          "section": "CHAPTER IV",
+          "retrieval_score": 0.709414005279541,
+          "matched_evidence": [],
+          "excerpt": "CHAPTER IV EXPORT AND IMPORT OF PACKAGED COMMODITIES 25. Restrictions on sale of export packages in India.- An export package shall not be sold in India unless the manufacturer or packer has re- packed or relabeled the commodity in accordan"
+        },
+        {
+          "chunk_id": "4923be0031c1a3238e40a561",
+          "page": 16,
+          "section": "5. Category of License",
+          "retrieval_score": 0.649964451789856,
+          "matched_evidence": [],
+          "excerpt": "5. Category of License: This license is granted under and is subject to the provisions of FSS Act, 2006 all of which must be complied with by the licensee. Place: Date: Stamp and signature of Designated Officer Food Safety and Standards Aut"
+        },
+        {
+          "chunk_id": "fa2d57aed0d178d1ddecf7e9",
+          "page": 40,
+          "section": "12. Labelling of Pre",
+          "retrieval_score": 0.6066642999649048,
+          "matched_evidence": [],
+          "excerpt": "12. Labelling of Pre-packaged Food Additives Sold other than by Retail Every package of a food additive meant for sale other than in Retail shall carry label in accordance to chapter 4 and regulation 10 of these regulations except the claus"
+        },
+        {
+          "chunk_id": "1d90b2df01c16f55574be12f",
+          "page": 27,
+          "section": "5.1.2 All raw materials, food additives and ingredients, wherever applicable, shall conform to all the Regulations",
+          "retrieval_score": 0.596560001373291,
+          "matched_evidence": [],
+          "excerpt": "5.1.2 All raw materials, food additives and ingredients, wherever applicable, shall conform to all the Regulations and standards laid down under the Act. 5.1.3 Records of raw materials, food additives and ingredients as well as their source"
+        },
+        {
+          "chunk_id": "4107d5c89d7ee53dc5f67eba",
+          "page": 10,
+          "section": "10. Declaration of name and address of the manufacturer, etc",
+          "retrieval_score": 0.5809850692749023,
+          "matched_evidence": [],
+          "excerpt": "10. Declaration of name and address of the manufacturer, etc.- Page 10 of 43 (1) Subject to the provisions of rule 6, every package kept, offered or exposed for sale or sold shall bear conspicuously on it, the name and complete address of t"
+        }
+      ],
+      "included_in_retrieval_metrics": false,
+      "skip_reason": "expected_evidence is null",
+      "metrics": null
+    },
+    {
+      "question": "What exact FSSAI label requirements apply to a food product sold only through a WhatsApp group with no physical package?",
+      "category": "unanswerable",
+      "expected_answer_type": "abstain",
+      "expected_evidence": null,
+      "retrieved": [
+        {
+          "chunk_id": "92a8cf7942c55a4308126c5a",
+          "page": 30,
+          "section": "5. Labelling Requirements",
+          "retrieval_score": 0.5728372931480408,
+          "matched_evidence": [],
+          "excerpt": "5. Labelling Requirements. -In addition to general requirements specified in Regulation 4, every package shall carry the following information on the label, namely,- (1) The Name of Food: Every package of food shall carry name of the food w"
+        },
+        {
+          "chunk_id": "621a3c03bb7d3147c7b17251",
+          "page": 38,
+          "section": "7. Mandatory Declarations",
+          "retrieval_score": 0.5218508243560791,
+          "matched_evidence": [],
+          "excerpt": "7. Mandatory Declarations. - (1) Wherever, packaged food contains ingredients and /or additives as stated in schedule -II of these regulations, the same shall be prominently displayed on the label. The size of numerals and letters for the d"
+        },
+        {
+          "chunk_id": "fa2d57aed0d178d1ddecf7e9",
+          "page": 40,
+          "section": "12. Labelling of Pre",
+          "retrieval_score": 0.5171078443527222,
+          "matched_evidence": [],
+          "excerpt": "12. Labelling of Pre-packaged Food Additives Sold other than by Retail Every package of a food additive meant for sale other than in Retail shall carry label in accordance to chapter 4 and regulation 10 of these regulations except the claus"
+        },
+        {
+          "chunk_id": "c123482f37fbebf3c2e5e40e",
+          "page": 28,
+          "section": null,
+          "retrieval_score": 0.5054037570953369,
+          "matched_evidence": [],
+          "excerpt": "(3) They shall come into force on the date of their publication in the Official Gazette and Food Business Operator shall comply with all the provisions of these regulations after one year from the date of their pub lication in the Official "
+        },
+        {
+          "chunk_id": "89d709cf82248d78fa423a11",
+          "page": 23,
+          "section": "CHAPTER V",
+          "retrieval_score": 0.5011242628097534,
+          "matched_evidence": [],
+          "excerpt": "CHAPTER V Page 23 of 43 EXEMPTIONS 26. Exemption in respect of certain packages.- Nothing con tained in these rules shall apply to any package containing a commodity if\u2014 (a) the net weight or measure of the commodity is ten gram or ten mill"
+        }
+      ],
+      "included_in_retrieval_metrics": false,
+      "skip_reason": "expected_evidence is null",
+      "metrics": null
+    },
+    {
+      "question": "What specific FSSAI registration category applies to a cloud kitchen with three locations and annual turnover of Rs 18 lakhs?",
+      "category": "unanswerable",
+      "expected_answer_type": "abstain",
+      "expected_evidence": null,
+      "retrieved": [
+        {
+          "chunk_id": "b42691e7737c338f85378ff1",
+          "page": 8,
+          "section": "SCHEDULE 2",
+          "retrieval_score": 0.4358149766921997,
+          "matched_evidence": [],
+          "excerpt": "SCHEDULE 2 [See Regulation 2.1.1 and Regulation 2.1.7] Form \u2018A\u2019 Application for Registration / Renewal of Registration under Food Safety and Standards Act, 2006 Kind of business: \u0086 Permanent/Temporary Stall holder \u0086 Hawker (Itinerant / Mobi"
+        },
+        {
+          "chunk_id": "ce1aee07f2f75f20ffab3562",
+          "page": 22,
+          "section": "Schedule 4",
+          "retrieval_score": 0.41250550746917725,
+          "matched_evidence": [],
+          "excerpt": "Schedule 4 (See Regulation 2.1.2) General Hygienic and Sanitary practices to be followed by Food Business operators It is hereby recognized and declared as a matter of legislative determination that in the field of human nutrition, safe, cl"
+        },
+        {
+          "chunk_id": "c3c90c017a8d4689a228da4e",
+          "page": 2,
+          "section": "Schedule 3",
+          "retrieval_score": 0.39788538217544556,
+          "matched_evidence": [],
+          "excerpt": "Schedule 3. (2) The petty food manufacturer shall follow the basic hygiene and safety requirements provided in Part I of"
+        },
+        {
+          "chunk_id": "4923be0031c1a3238e40a561",
+          "page": 16,
+          "section": "5. Category of License",
+          "retrieval_score": 0.3846578598022461,
+          "matched_evidence": [],
+          "excerpt": "5. Category of License: This license is granted under and is subject to the provisions of FSS Act, 2006 all of which must be complied with by the licensee. Place: Date: Stamp and signature of Designated Officer Food Safety and Standards Aut"
+        },
+        {
+          "chunk_id": "b5200d7218515df870dc9d22",
+          "page": 22,
+          "section": "SCHEDULE",
+          "retrieval_score": 0.37923121452331543,
+          "matched_evidence": [],
+          "excerpt": "SCHEDULE - 3 (See Regulation 2.1.3) FEE FOR GRANT/ RENEWAL OF LICENSE REGISTRATION / LICENSE FEE PER ANNUM IN RUPEES 1. Fees for Registration Rs 100 2. Fees for License issued by Central Licensing Authority: Rs 7500 3. Fees for License issu"
+        }
+      ],
+      "included_in_retrieval_metrics": false,
+      "skip_reason": "expected_evidence is null",
+      "metrics": null
+    },
+    {
+      "question": "What exact font family must I use for every English word on my food label?",
+      "category": "unanswerable",
+      "expected_answer_type": "abstain",
+      "expected_evidence": null,
+      "retrieved": [
+        {
+          "chunk_id": "92a8cf7942c55a4308126c5a",
+          "page": 30,
+          "section": "5. Labelling Requirements",
+          "retrieval_score": 0.48377516865730286,
+          "matched_evidence": [],
+          "excerpt": "5. Labelling Requirements. -In addition to general requirements specified in Regulation 4, every package shall carry the following information on the label, namely,- (1) The Name of Food: Every package of food shall carry name of the food w"
+        },
+        {
+          "chunk_id": "fe36cef4c6c74e14de7f5124",
+          "page": 40,
+          "section": "CHAPTER 5",
+          "retrieval_score": 0.40737098455429077,
+          "matched_evidence": [],
+          "excerpt": "CHAPTER 5 LABELLING OF FOOD ADDITIVES WHEN SOLD AS SUCH 11. Labelling of packaged Food Additives for Retail Sale (1) Every package of a food additive meant for retail sale to the consumer shall be labelled in accordance with the Food Safety"
+        },
+        {
+          "chunk_id": "5c6ee95390964251ea8abb20",
+          "page": 46,
+          "section": "2. Specific requirements/ restrictions on manner of labelling",
+          "retrieval_score": 0.3771114647388458,
+          "matched_evidence": [],
+          "excerpt": "2. Specific requirements/ restrictions on manner of labelling 2.1 Labelling of edible oils and fats (1) The package, label or the advertisement of edible refined vegetable oils and fats shall not use any exaggerated expressions like \u201cSuper-"
+        },
+        {
+          "chunk_id": "fa2d57aed0d178d1ddecf7e9",
+          "page": 40,
+          "section": "12. Labelling of Pre",
+          "retrieval_score": 0.3760875463485718,
+          "matched_evidence": [],
+          "excerpt": "12. Labelling of Pre-packaged Food Additives Sold other than by Retail Every package of a food additive meant for sale other than in Retail shall carry label in accordance to chapter 4 and regulation 10 of these regulations except the claus"
+        },
+        {
+          "chunk_id": "4923be0031c1a3238e40a561",
+          "page": 16,
+          "section": "5. Category of License",
+          "retrieval_score": 0.3524942994117737,
+          "matched_evidence": [],
+          "excerpt": "5. Category of License: This license is granted under and is subject to the provisions of FSS Act, 2006 all of which must be complied with by the licensee. Place: Date: Stamp and signature of Designated Officer Food Safety and Standards Aut"
+        }
+      ],
+      "included_in_retrieval_metrics": false,
+      "skip_reason": "expected_evidence is null",
+      "metrics": null
+    }
+  ]
+}
