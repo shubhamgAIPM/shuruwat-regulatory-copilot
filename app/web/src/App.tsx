@@ -17,7 +17,7 @@ import {
 
 type Source = {
   id: string
-  title: string
+  document_title: string
   authority: string
   section: string | null
   page: number
@@ -156,7 +156,7 @@ function App() {
       <aside className={`evidence-panel ${isEvidenceOpen ? 'is-open' : ''}`}>
         <div className="evidence-header"><div><span className="panel-kicker">Evidence</span><h2>Source trail</h2></div><button className="icon-button mobile-close" onClick={() => setIsEvidenceOpen(false)} aria-label="Close evidence panel"><X size={18} /></button></div>
         <div className="evidence-intro"><BookOpen size={17} /><span>Every material claim should lead back to a document, section, and page.</span></div>
-        {sourceList.length === 0 ? <div className="empty-evidence">Sources will appear here when an answer is grounded in the corpus.</div> : sourceList.map((source) => <button className={`source-card ${activeSource?.id === source.id ? 'selected' : ''}`} key={source.id} onClick={() => setActiveSource(source)}><div className="source-topline"><span>{source.id}</span><span>p. {source.page}</span></div><h3>{source.section ?? 'Section not labelled'}</h3><p>{source.title} · {source.authority}</p><div className="source-excerpt">“{source.excerpt}”</div></button>)}
+        {sourceList.length === 0 ? <div className="empty-evidence">Sources will appear here when an answer is grounded in the corpus.</div> : sourceList.map((source) => <button className={`source-card ${activeSource?.id === source.id ? 'selected' : ''}`} key={source.id} onClick={() => setActiveSource(source)}><div className="source-topline"><span>{source.id}</span><span>p. {source.page}</span></div><h3>{source.section ?? 'Section not labelled'}</h3><p>{source.document_title} · {source.authority}</p><div className="source-excerpt">“{source.excerpt}”</div></button>)}
         <div className="panel-note"><ShieldCheck size={16} /><div><strong>Evidence first</strong><p>If the sources don’t cover your question, Shuruwat will abstain instead of guessing.</p></div></div>
       </aside>
     </div>
